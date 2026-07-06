@@ -347,91 +347,39 @@ TIMELINE
 ===========================*/
 
 /* Timeline Horizontal */
-.timeline {
-    position: relative;
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
-}
-
-/* garis tengah */
-.timeline::before {
-    content: "";
-    position: absolute;
-    width: 4px;
-    background: #4CAF50;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 10px;
-}
-
-/* item */
-.timeline-item {
-    position: relative;
-    width: 50%;
-    padding: 20px 40px;
-}
-
-/* kiri kanan */
-.timeline-item:nth-child(odd) {
-    left: 0;
-    text-align: right;
-}
-
-.timeline-item:nth-child(even) {
-    left: 50%;
-}
-
-/* card */
 .timeline-content {
-    background: white;
-    padding: 18px 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
 }
 
-.timeline-content:hover {
-    transform: translateY(-5px);
-}
-
-/* icon */
-.timeline-icon {
-    position: absolute;
-    top: 20px;
-    width: 45px;
-    height: 45px;
-    background: #4CAF50;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* posisi icon */
-.timeline-item:nth-child(odd) .timeline-icon {
-    right: -22px;
-}
-
-.timeline-item:nth-child(even) .timeline-icon {
-    left: -22px;
-}
-
-/* teks */
 .timeline-content h3 {
-    margin-bottom: 8px;
     color: #2e7d32;
+    margin-bottom: 15px;
 }
 
 .timeline-content p {
-    margin: 0;
+    text-align: justify;
+    line-height: 1.8;
     color: #555;
-    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.timeline-content ul {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.timeline-content li {
+    margin-bottom: 18px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.timeline-content li strong {
+    color: #1b5e20;
+    font-size: 16px;
 }
 
 /* responsive */
@@ -1071,4 +1019,16 @@ RESPONSIVE
     color: #2c3e2d;
     font-size: 14px;
     line-height: 1.6;
+}
+
+.reference-card a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.reference-card a:hover {
+    color: #1b5e20;
+    text-decoration: underline;
 }
