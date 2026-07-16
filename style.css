@@ -342,169 +342,581 @@ SECTION
     margin-top: 10px;
 }
 
-/*==========================
-TIMELINE
-===========================*/
+/* =====================================================
+   BUDIDAYA PADI - PROFESSIONAL MODERN TIMELINE
+===================================================== */
 
-/* Timeline Horizontal */
-.timeline-content {
-    background: #fff;
-    padding: 25px 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+#budidaya {
+    background: linear-gradient(180deg, #f8fcf6, #ffffff);
+    padding: 100px 8%;
 }
 
-.timeline-content h3 {
-    color: #2e7d32;
-    margin-bottom: 15px;
+
+/* ==============================
+        HEADER
+============================== */
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
 }
 
-.timeline-content p {
-    text-align: justify;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.timeline-content ul {
-    margin: 0;
-    padding-left: 22px;
-}
-
-.timeline-content li {
-    margin-bottom: 18px;
-    line-height: 1.8;
-    color: #444;
-}
-
-.timeline-content li strong {
+.section-header h2 {
+    font-size: 42px;
     color: #1b5e20;
-    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: .3px;
+    margin-bottom: 18px;
 }
 
-/* responsive */
-@media (max-width:768px) {
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline-item {
-        width: 100%;
-        padding-left: 60px;
-        padding-right: 20px;
-        text-align: left !important;
-        left: 0 !important;
-    }
-
-    .timeline-icon {
-        left: 0 !important;
-    }
+.section-header p {
+    max-width: 750px;
+    margin: auto;
+    color: #666;
+    font-size: 17px;
+    line-height: 1.9;
 }
+
+
+/* ==============================
+        TIMELINE
+============================== */
 
 .timeline {
     position: relative;
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* garis tengah */
+
 .timeline::before {
+
     content: "";
+
     position: absolute;
-    width: 4px;
-    background: #4CAF50;
+
     top: 0;
     bottom: 0;
+
     left: 50%;
+
+    width: 5px;
+
     transform: translateX(-50%);
-    border-radius: 10px;
+
+    background:
+        linear-gradient(180deg,
+            #1b5e20,
+            #66bb6a,
+            #1b5e20);
+
+    border-radius: 20px;
+
 }
 
-/* item */
+
+
+/* ==============================
+        ITEM
+============================== */
+
+
 .timeline-item {
+
     position: relative;
+
     width: 50%;
-    padding: 20px 40px;
+
+    padding: 25px 55px;
+
+    margin-bottom: 80px;
+
+    box-sizing: border-box;
+
 }
 
-/* kiri kanan */
+
 .timeline-item:nth-child(odd) {
+
     left: 0;
+
     text-align: right;
+
 }
+
 
 .timeline-item:nth-child(even) {
+
     left: 50%;
+
 }
 
-/* card */
-.timeline-content {
-    background: white;
-    padding: 18px 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
-}
 
-.timeline-content:hover {
-    transform: translateY(-5px);
-}
 
-/* icon */
+/* ==============================
+        ICON
+============================== */
+
+
 .timeline-icon {
+
     position: absolute;
-    top: 20px;
-    width: 45px;
-    height: 45px;
-    background: #4CAF50;
-    color: white;
+
+    top: 35px;
+
+    width: 75px;
+
+    height: 75px;
+
     border-radius: 50%;
+
+
+    background:
+
+        linear-gradient(135deg,
+            #2e7d32,
+            #81c784);
+
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
-    font-size: 18px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+
+    color: white;
+
+    font-size: 30px;
+
+
+    box-shadow:
+
+        0 15px 35px rgba(46, 125, 50, .35);
+
+
+    z-index: 5;
+
+    border: 5px solid #fff;
+
+    transition: .4s;
+
 }
 
-/* posisi icon */
+
 .timeline-item:nth-child(odd) .timeline-icon {
-    right: -22px;
+
+    right: -37px;
+
 }
+
 
 .timeline-item:nth-child(even) .timeline-icon {
-    left: -22px;
+
+    left: -37px;
+
 }
 
-/* teks */
-.timeline-content h3 {
-    margin-bottom: 8px;
-    color: #2e7d32;
+
+
+/* ==============================
+        CARD
+============================== */
+
+
+.timeline-content {
+
+    background:
+
+        rgba(255, 255, 255, .95);
+
+
+    padding: 35px;
+
+
+    border-radius: 25px;
+
+
+    box-shadow:
+
+        0 15px 40px rgba(0, 0, 0, .08);
+
+
+    border: 1px solid #edf5ed;
+
+
+    position: relative;
+
+
+    overflow: hidden;
+
+
+    transition: .4s;
+
 }
+
+
+
+.timeline-content::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    height: 7px;
+
+    width: 100%;
+
+
+    background:
+
+        linear-gradient(90deg,
+            #1b5e20,
+            #81c784);
+
+}
+
+
+
+.timeline-content:hover {
+
+    transform:
+
+        translateY(-12px);
+
+
+    box-shadow:
+
+        0 25px 55px rgba(0, 0, 0, .14);
+
+}
+
+
+
+/* ==============================
+        TITLE
+============================== */
+
+
+.timeline-content h3 {
+
+    color: #1b5e20;
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* ==============================
+        TEXT
+============================== */
+
 
 .timeline-content p {
-    margin: 0;
+
     color: #555;
-    line-height: 1.6;
+
+    line-height: 1.9;
+
+    font-size: 16px;
+
+    text-align: justify;
+
+    margin-bottom: 25px;
+
 }
 
-/* responsive */
-@media (max-width:768px) {
-    .timeline::before {
-        left: 20px;
+
+
+/* ==============================
+        LIST
+============================== */
+
+
+.timeline-content ul {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+
+.timeline-content li {
+
+    position: relative;
+
+    padding-left: 42px;
+
+    margin-bottom: 18px;
+
+
+    color: #555;
+
+    line-height: 1.8;
+
+    text-align: left;
+
+}
+
+
+.timeline-content li::before {
+
+
+    content: "✓";
+
+
+    position: absolute;
+
+    left: 0;
+
+    top: 2px;
+
+
+    width: 28px;
+
+    height: 28px;
+
+
+    border-radius: 50%;
+
+
+    background: #e8f5e9;
+
+
+    color: #2e7d32;
+
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+
+.timeline-content strong {
+
+    color: #2e7d32;
+
+    font-weight: 700;
+
+}
+
+
+
+/* ==============================
+        HOVER
+============================== */
+
+
+.timeline-item:hover .timeline-icon {
+
+
+    transform:
+
+        scale(1.15) rotate(10deg);
+
+
+}
+
+
+
+/* ==============================
+        ANIMATION
+============================== */
+
+
+.timeline-item {
+
+    animation: fadeUp .8s ease forwards;
+
+}
+
+
+
+@keyframes fadeUp {
+
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(70px);
+
     }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+
+}
+
+
+
+
+/* ==============================
+        TABLET
+============================== */
+
+
+@media(max-width:992px) {
+
+
+    .timeline::before {
+
+        left: 38px;
+
+    }
+
 
     .timeline-item {
+
+
         width: 100%;
-        padding-left: 60px;
-        padding-right: 20px;
-        text-align: left !important;
+
+
         left: 0 !important;
+
+
+        padding-left: 100px;
+
+
+        padding-right: 20px;
+
+
+        text-align: left !important;
+
+
     }
 
+
+
     .timeline-icon {
+
+
         left: 0 !important;
+
     }
+
+
+    .timeline-content {
+
+
+        padding: 30px;
+
+    }
+
+
+    .section-header h2 {
+
+
+        font-size: 34px;
+
+    }
+
+
+}
+
+
+
+/* ==============================
+        MOBILE
+============================== */
+
+
+@media(max-width:600px) {
+
+
+    #budidaya {
+
+
+        padding: 70px 20px;
+
+    }
+
+
+
+    .section-header h2 {
+
+
+        font-size: 28px;
+
+    }
+
+
+
+    .section-header p {
+
+
+        font-size: 15px;
+
+    }
+
+
+
+    .timeline-content {
+
+
+        padding: 25px;
+
+        border-radius: 20px;
+
+    }
+
+
+
+    .timeline-content h3 {
+
+
+        font-size: 21px;
+
+    }
+
+
+    .timeline-content p {
+
+
+        font-size: 15px;
+
+    }
+
+
+    .timeline-icon {
+
+
+        width: 60px;
+
+        height: 60px;
+
+        font-size: 22px;
+
+    }
+
+
+
 }
 
 /*==========================
@@ -585,6 +997,166 @@ TABLE
         font-size: 13px;
         padding: 10px;
     }
+}
+
+/* ==========================
+   HARGA PASAR KOMODITAS
+========================== */
+
+.market-section {
+    background: linear-gradient(135deg, #f8fff6, #eef8ee);
+    padding: 80px 8%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.section-header h2 i {
+    color: #43a047;
+    margin-right: 8px;
+}
+
+.section-header p {
+    color: #666;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* GRID */
+
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+
+.price-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    transition: .35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.price-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #2e7d32, #66bb6a);
+}
+
+.price-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .15);
+}
+
+/* ICON */
+
+.price-icon {
+    width: 75px;
+    height: 75px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: #e8f5e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+}
+
+/* JUDUL */
+
+.price-card h3 {
+    font-size: 20px;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+/* HARGA */
+
+.price-card h1 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+/* STATUS */
+
+.price-up,
+.price-down,
+.price-stable {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.price-up {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.price-down {
+    background: #ffebee;
+    color: #d32f2f;
+}
+
+.price-stable {
+    background: #eceff1;
+    color: #455a64;
+}
+
+/* UPDATE */
+
+.price-card small {
+    display: block;
+    color: #777;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px) {
+
+    .market-section {
+        padding: 60px 25px;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+
+    .price-card {
+        padding: 25px;
+    }
+
+    .price-card h1 {
+        font-size: 28px;
+    }
+
 }
 
 /*==========================
