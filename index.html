@@ -14,40 +14,15 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
   <!-- ================= HEADER ================= -->
-  <header class="header">
-
-    <nav class="navbar">
-
-      <div class="logo">
-        <i class="fas fa-pepper-hot"></i>
-        <a href="index.html">TaniCerdas</a>
-      </div>
-
-      <!-- MENU -->
-      <ul class="nav-menu" id="navMenu">
-
-        <li><a href="index.html">Budidaya Padi</a></li>
-        <li><a href="cabe.html">Budidaya Cabe</a></li>
-        <li><a href="#kalkulator">Kalkulator</a></li>
-        <li><a href="#pemupukan">Pemupukan</a></li>
-        <li><a href="#video">Video</a></li>
-        <li><a href="#sumber">Referensi</a></li>
-
-      </ul>
-
-      <!-- BUTTON HAMBURGER -->
-      <button class="mobile-menu-btn" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </button>
-
-    </nav>
-
-  </header>
+  <div id="header"></div>
   <!-- ================= HERO ================= -->
 
   <section class="hero1">
@@ -58,11 +33,11 @@
 
       <h1>🌾 Padi</h1>
 
-      <h2>Panduan Budidaya Cabe Modern</h2>
+      <h2>Panduan Budidaya Padi Modern</h2>
 
       <p>
 
-        Website edukasi budidaya cabe yang membahas teknik budidaya
+        Website edukasi budidaya Padi yang membahas teknik budidaya
         mulai dari persiapan lahan, pembibitan, penanaman,
         pemupukan, pengendalian OPT,
         hingga panen dan pasca panen.
@@ -132,781 +107,13 @@
   </section>
 
   <!-- ================= BUDIDAYA ================= -->
-  <section id="budidaya" class="section">
-
-    <div class="section-header">
-      <h2>Budidaya Padi Lengkap</h2>
-      <p>Panduan budidaya padi berdasarkan sumber resmi dan terpercaya.</p>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-tractor"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>1. Persiapan Lahan</h3>
-
-        <p>
-          Persiapan lahan merupakan tahapan awal dalam budidaya padi yang
-          bertujuan menciptakan kondisi tanah yang subur, gembur, dan siap
-          mendukung pertumbuhan tanaman. Pengolahan lahan yang baik juga dapat
-          mengurangi populasi gulma, hama, serta penyakit sehingga tanaman
-          memiliki lingkungan tumbuh yang optimal.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Sanitasi Lingkungan Sawah</strong><br>
-            Bersihkan saluran irigasi, pematang, serta gulma yang dapat
-            menjadi inang alternatif berbagai hama seperti wereng batang
-            coklat dan tikus sawah. Sanitasi yang baik juga membantu
-            memperlancar aliran air irigasi.
-          </li>
-
-          <li>
-            <strong>Pembalikan Tanah</strong><br>
-            Lakukan pembajakan pertama menggunakan bajak singkal pada
-            kedalaman sekitar 15–20 cm untuk membalik tanah, mengubur
-            jerami atau sisa tanaman, serta menekan pertumbuhan gulma.
-            Setelah itu biarkan lahan bera selama 7–14 hari agar bahan
-            organik terdekomposisi dan gas beracun seperti H₂S serta CH₄
-            menguap.
-          </li>
-
-          <li>
-            <strong>Pelorodan dan Perataan</strong><br>
-            Lakukan pembajakan kedua kemudian lanjutkan dengan penggaruan
-            menggunakan rotator atau garu hingga tanah menjadi lumpur yang
-            homogen (puddle). Permukaan lahan harus diratakan agar
-            distribusi air, pupuk, dan pertumbuhan tanaman menjadi lebih
-            seragam.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-flask"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>2. Pemupukan Dasar</h3>
-
-        <p>
-          Pemupukan dasar merupakan tahap pemberian unsur hara sebelum
-          penanaman padi untuk menyediakan nutrisi awal yang dibutuhkan
-          tanaman. Pemberian pupuk yang tepat dapat meningkatkan kesuburan
-          tanah, memperkuat pertumbuhan akar, memperbaiki struktur tanah,
-          serta mendukung pertumbuhan tanaman secara optimal sejak fase awal.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Aplikasi Bahan Organik</strong><br>
-            Tebarkan pupuk kandang yang telah matang atau kompos sebanyak
-            <strong>2–5 ton/ha</strong>, disesuaikan dengan tingkat
-            kesuburan tanah. Bahan organik berfungsi memperbaiki struktur
-            tanah, meningkatkan kapasitas tukar kation (KTK), menjaga
-            kelembapan tanah, serta meningkatkan aktivitas mikroorganisme
-            yang berperan dalam proses dekomposisi dan penyediaan unsur
-            hara bagi tanaman.
-          </li>
-
-          <li>
-            <strong>Pemberian Pupuk Fosfat</strong><br>
-            Berikan pupuk fosfat seperti <strong>SP-36</strong> atau
-            <strong>Rock Phosphate</strong> sebanyak sekitar
-            <strong>100 kg/ha</strong> sebelum tanam atau satu hari
-            sebelum penanaman. Unsur fosfor bersifat tidak mudah bergerak
-            di dalam tanah sehingga perlu diberikan lebih awal untuk
-            merangsang pembentukan akar, mempercepat pertumbuhan bibit,
-            dan meningkatkan daya serap unsur hara lainnya.
-          </li>
-
-          <li>
-            <strong>Pencampuran Pupuk</strong><br>
-            Setelah pupuk ditebarkan, lakukan penggaruan atau pembajakan
-            ringan agar pupuk tercampur merata ke dalam lapisan tanah.
-            Langkah ini membantu mengurangi kehilangan unsur hara akibat
-            aliran air serta meningkatkan efisiensi penyerapan oleh akar
-            tanaman.
-          </li>
-
-          <li>
-            <strong>Penyesuaian Dosis</strong><br>
-            Dosis pupuk sebaiknya disesuaikan dengan hasil analisis tanah,
-            rekomendasi penyuluh pertanian, atau kondisi lahan setempat.
-            Pemupukan berimbang mampu meningkatkan produktivitas sekaligus
-            mengurangi pemborosan pupuk dan dampak negatif terhadap
-            lingkungan.
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-seedling"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>3. Pemilihan Benih</h3>
-
-        <p>
-          Pemilihan benih merupakan salah satu faktor utama yang menentukan
-          keberhasilan budidaya padi. Benih yang berkualitas memiliki daya
-          kecambah tinggi, pertumbuhan yang seragam, lebih tahan terhadap
-          serangan hama dan penyakit, serta mampu menghasilkan produktivitas
-          yang lebih tinggi. Oleh karena itu, penggunaan benih unggul
-          bersertifikat sangat dianjurkan agar hasil panen lebih optimal.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Gunakan Benih Bersertifikat</strong><br>
-            Pilih benih bersertifikat (label biru atau ungu) dengan daya
-            kecambah minimal 85%. Benih bersertifikat telah melalui proses
-            pengujian mutu sehingga memiliki tingkat kemurnian varietas,
-            kesehatan benih, dan kualitas yang lebih terjamin dibandingkan
-            benih hasil simpanan sendiri.
-          </li>
-
-          <li>
-            <strong>Pilih Varietas yang Sesuai</strong><br>
-            Gunakan varietas unggul yang sesuai dengan kondisi
-            agroekosistem setempat, seperti <strong>Inpari 32</strong>,
-            <strong>Inpari 42 Agritan Green Super Rice (GSR)</strong>,
-            atau <strong>Ciherang</strong>. Pemilihan varietas perlu
-            mempertimbangkan potensi hasil, umur panen, ketahanan terhadap
-            organisme pengganggu tanaman (OPT), serta kemampuan beradaptasi
-            terhadap kondisi lingkungan.
-          </li>
-
-          <li>
-            <strong>Uji Apung Benih</strong><br>
-            Lakukan seleksi benih menggunakan larutan garam. Larutkan garam
-            ke dalam air hingga telur ayam mentah dapat mengapung, kemudian
-            masukkan benih padi. Benih yang mengapung umumnya hampa atau
-            kurang bernas sehingga sebaiknya dibuang, sedangkan benih yang
-            tenggelam dipilih karena memiliki kualitas yang lebih baik.
-          </li>
-
-          <li>
-            <strong>Pembersihan Benih</strong><br>
-            Setelah proses seleksi selesai, cuci benih menggunakan air
-            bersih beberapa kali hingga sisa garam hilang. Langkah ini
-            penting untuk menjaga viabilitas benih dan mencegah gangguan
-            terhadap proses perkecambahan pada tahap penyemaian.
-          </li>
-
-          <li>
-            <strong>Penyimpanan Sebelum Disemai</strong><br>
-            Benih yang telah diseleksi sebaiknya segera direndam untuk
-            proses perkecambahan. Apabila belum digunakan, simpan benih di
-            tempat yang bersih, kering, memiliki sirkulasi udara yang baik,
-            serta terhindar dari sinar matahari langsung dan serangan
-            hama gudang agar kualitas benih tetap terjaga.
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-leaf"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>4. Penyemaian</h3>
-
-        <p>
-          Penyemaian merupakan tahapan untuk menghasilkan bibit padi yang
-          sehat, seragam, dan memiliki sistem perakaran yang kuat sebelum
-          dipindahkan ke lahan utama. Proses penyemaian yang dilakukan dengan
-          benar akan meningkatkan daya tumbuh tanaman, mempercepat proses
-          adaptasi setelah pindah tanam, serta mendukung pembentukan anakan
-          yang produktif.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Perlakuan Benih (Seed Treatment)</strong><br>
-            Benih yang telah diseleksi dicuci hingga bersih untuk
-            menghilangkan sisa larutan garam, kemudian direndam dalam air
-            bersih selama ±24 jam agar benih menyerap air secara optimal
-            (imbibisi). Setelah itu, benih diperam menggunakan karung goni
-            atau kain lembap selama 24–48 jam hingga muncul kecambah
-            sepanjang 1–2 mm sebagai tanda benih siap disemai.
-          </li>
-
-          <li>
-            <strong>Pembuatan Bedengan Persemaian</strong><br>
-            Siapkan bedengan dengan lebar sekitar 1–1,2 meter, tinggi
-            10–15 cm, dan panjang disesuaikan dengan kondisi lahan.
-            Luas persemaian umumnya sekitar 4% dari total luas lahan tanam.
-            Bedengan dibuat rata, memiliki drainase yang baik, dan diberi
-            pupuk organik agar media persemaian lebih subur.
-          </li>
-
-          <li>
-            <strong>Penyebaran Benih</strong><br>
-            Taburkan benih yang telah berkecambah secara merata dengan
-            kepadatan sekitar 50–75 gram/m². Hindari penaburan yang terlalu
-            rapat karena dapat menyebabkan bibit tumbuh kurus, mudah
-            terserang penyakit, serta mengalami persaingan dalam memperoleh
-            cahaya dan unsur hara.
-          </li>
-
-          <li>
-            <strong>Pemeliharaan Persemaian</strong><br>
-            Jaga kelembapan media dengan pengairan secukupnya dan hindari
-            genangan air yang berlebihan. Bersihkan gulma yang tumbuh di
-            sekitar persemaian serta lindungi bibit dari serangan burung,
-            keong mas, atau hama lainnya menggunakan jaring atau pengaman
-            yang sesuai.
-          </li>
-
-          <li>
-            <strong>Bibit Siap Tanam</strong><br>
-            Bibit umumnya siap dipindahkan ke lahan utama pada umur
-            18–21 hari setelah sebar (HSS). Bibit yang baik memiliki tinggi
-            sekitar 15–20 cm, berwarna hijau segar, memiliki 2–3 helai
-            daun, serta sistem perakaran yang sehat sehingga mampu
-            beradaptasi dengan cepat setelah proses penanaman.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-ruler-combined"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>5. Penanaman</h3>
-
-        <p>
-          Penanaman merupakan tahap pemindahan bibit dari persemaian ke lahan
-          sawah yang telah dipersiapkan. Teknik penanaman yang tepat akan
-          memberikan ruang tumbuh yang optimal bagi tanaman, meningkatkan
-          penyerapan cahaya matahari, memperbaiki sirkulasi udara, serta
-          mendukung pembentukan anakan produktif sehingga produktivitas padi
-          dapat meningkat.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Sistem Jajar Legowo</strong><br>
-            Gunakan sistem tanam Jajar Legowo (Jarwo) 2:1 atau 4:1 sesuai
-            kondisi lahan. Sistem Legowo 2:1 dengan jarak tanam sekitar
-            <strong>25 × 12,5 × 50 cm</strong> sangat dianjurkan karena
-            mampu meningkatkan efek tanaman pinggir (<em>border effect</em>),
-            memperbaiki penetrasi cahaya matahari, memperlancar sirkulasi
-            udara, serta memudahkan kegiatan pemupukan, penyiangan, dan
-            pengendalian hama.
-          </li>
-
-          <li>
-            <strong>Umur dan Kondisi Bibit</strong><br>
-            Gunakan bibit muda berumur sekitar <strong>18–21 hari setelah
-              sebar (HSS)</strong>. Bibit yang masih muda memiliki kemampuan
-            beradaptasi lebih baik, menghasilkan lebih banyak anakan
-            produktif, serta mengalami stres pindah tanam yang lebih rendah
-            dibandingkan bibit yang terlalu tua.
-          </li>
-
-          <li>
-            <strong>Jumlah Bibit per Lubang</strong><br>
-            Tanam sebanyak <strong>1–3 bibit</strong> pada setiap lubang
-            tanam. Penggunaan bibit dalam jumlah sedikit dapat mengurangi
-            persaingan antar tanaman dalam memperoleh air, cahaya, dan
-            unsur hara sehingga pertumbuhan menjadi lebih optimal.
-          </li>
-
-          <li>
-            <strong>Teknik Penanaman</strong><br>
-            Tanam bibit pada kedalaman sekitar <strong>1–2 cm</strong>
-            dengan posisi akar membentuk huruf <strong>"L"</strong> atau
-            tegak secara alami. Hindari penanaman yang terlalu dalam karena
-            dapat menghambat pembentukan anakan dan memperlambat
-            pertumbuhan tanaman pada fase vegetatif.
-          </li>
-
-          <li>
-            <strong>Pengaturan Jarak Tanam</strong><br>
-            Pastikan jarak tanam seragam di seluruh lahan agar setiap
-            tanaman memperoleh ruang tumbuh yang cukup. Jarak tanam yang
-            teratur membantu mempermudah perawatan, meningkatkan efisiensi
-            pemupukan dan irigasi, serta mengurangi risiko penyebaran hama
-            dan penyakit akibat kondisi tanaman yang terlalu rapat.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-water"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>6. Pengairan dan Irigasi</h3>
-
-        <p>
-          Pengelolaan air merupakan salah satu faktor penting dalam budidaya
-          padi. Ketersediaan air yang cukup pada setiap fase pertumbuhan akan
-          mendukung perkembangan akar, pembentukan anakan, hingga pengisian
-          bulir. Pengairan yang dilakukan secara tepat juga dapat menghemat
-          penggunaan air, meningkatkan efisiensi pemupukan, serta mengurangi
-          risiko serangan hama dan penyakit.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Sistem Pengairan Intermiten</strong><br>
-            Terapkan sistem pengairan berselang (<em>intermittent irrigation</em>)
-            dengan mempertahankan tinggi genangan sekitar
-            <strong>2–5 cm</strong> pada fase awal pertumbuhan hingga
-            pembentukan anakan. Metode ini mampu menghemat penggunaan air,
-            meningkatkan aerasi tanah, serta menekan emisi gas metana
-            (CH<sub>4</sub>) dari lahan sawah.
-          </li>
-
-          <li>
-            <strong>Pengeringan pada Fase Vegetatif</strong><br>
-            Setelah tanaman mencapai fase anakan maksimum, lakukan
-            pengeringan sementara hingga permukaan tanah tampak retak halus
-            (pecah rambut). Kondisi ini merangsang pertumbuhan akar menjadi
-            lebih dalam sehingga tanaman lebih kuat dan mampu menyerap
-            unsur hara secara lebih efisien.
-          </li>
-
-          <li>
-            <strong>Pengairan pada Fase Generatif</strong><br>
-            Saat memasuki fase primordia bunga hingga pembungaan, kebutuhan
-            air meningkat sehingga lahan perlu diairi kembali dengan kondisi
-            <em>macak-macak</em> atau genangan dangkal. Ketersediaan air
-            pada fase ini sangat penting untuk mendukung pembentukan malai
-            dan proses pengisian bulir secara optimal.
-          </li>
-
-          <li>
-            <strong>Pengeringan Menjelang Panen</strong><br>
-            Hentikan pengairan sekitar <strong>10–14 hari sebelum panen</strong>.
-            Pengeringan lahan membantu mempercepat pemasakan gabah secara
-            serempak, memperkuat batang sehingga mengurangi risiko rebah,
-            serta mempermudah proses pemanenan, baik secara manual maupun
-            menggunakan mesin <em>combine harvester</em>.
-          </li>
-
-          <li>
-            <strong>Pemantauan Saluran Irigasi</strong><br>
-            Periksa saluran pemasukan dan pembuangan air secara berkala agar
-            tidak tersumbat oleh lumpur, gulma, atau sampah. Sistem irigasi
-            yang berfungsi dengan baik akan menjaga distribusi air tetap
-            merata di seluruh petakan sawah dan mengurangi risiko kekeringan
-            maupun genangan yang berlebihan.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-spray-can"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>7. Pemupukan Susulan</h3>
-
-        <p>
-          Pemupukan susulan dilakukan untuk memenuhi kebutuhan unsur hara
-          tanaman selama fase pertumbuhan vegetatif hingga generatif.
-          Pemberian pupuk secara bertahap dan berimbang membantu
-          meningkatkan jumlah anakan produktif, memperkuat batang tanaman,
-          serta mendukung pembentukan dan pengisian bulir sehingga hasil
-          panen menjadi lebih optimal.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Pemupukan Berimbang</strong><br>
-            Pemupukan susulan sebaiknya dilakukan berdasarkan kebutuhan
-            tanaman dengan memperhatikan kondisi lahan dan pembacaan
-            <strong>Bagan Warna Daun (BWD)</strong>. Penggunaan BWD dapat
-            membantu menentukan kebutuhan pupuk nitrogen sehingga
-            pemupukan lebih efisien, mengurangi pemborosan pupuk, serta
-            menekan risiko serangan hama dan penyakit akibat kelebihan
-            nitrogen.
-          </li>
-
-          <li>
-            <strong>Pemupukan Susulan I (7–10 HST)</strong><br>
-            Berikan pupuk <strong>Urea sekitar 100 kg/ha</strong> yang
-            dikombinasikan dengan <strong>NPK 15-15-15 atau NPK 16-16-16
-              sebanyak ±200 kg/ha</strong>. Pemupukan pada tahap ini
-            bertujuan mempercepat pertumbuhan vegetatif, meningkatkan
-            pembentukan daun, serta merangsang munculnya anakan baru.
-          </li>
-
-          <li>
-            <strong>Pemupukan Susulan II (21–24 HST)</strong><br>
-            Tambahkan <strong>Urea sekitar 50 kg/ha</strong> atau sesuai
-            hasil pengamatan menggunakan BWD. Pada fase ini tanaman mulai
-            membentuk anakan maksimum sehingga kebutuhan nitrogen harus
-            terpenuhi agar jumlah anakan produktif dapat meningkat tanpa
-            menyebabkan pertumbuhan vegetatif yang berlebihan.
-          </li>
-
-          <li>
-            <strong>Pemupukan Susulan III (35–40 HST)</strong><br>
-            Saat tanaman memasuki fase primordia atau pembentukan malai,
-            berikan pupuk <strong>KCl sekitar 50 kg/ha</strong>. Unsur
-            kalium berfungsi memperkuat batang tanaman, meningkatkan
-            ketahanan terhadap penyakit, memperbaiki proses pengisian
-            bulir, serta meningkatkan kualitas gabah yang dihasilkan.
-          </li>
-
-          <li>
-            <strong>Teknik Aplikasi Pupuk</strong><br>
-            Sebarkan pupuk secara merata pada lahan yang memiliki kondisi
-            air <em>macak-macak</em> atau genangan dangkal. Hindari
-            pemberian pupuk saat air mengalir deras atau hujan lebat karena
-            dapat menyebabkan unsur hara tercuci. Setelah pemupukan,
-            pertahankan kondisi air selama beberapa hari agar penyerapan
-            unsur hara oleh akar berlangsung secara optimal.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-bug"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>8. Pengendalian Hama dan Penyakit (PHT)</h3>
-
-        <p>
-          Pengendalian hama dan penyakit dilakukan dengan menerapkan konsep
-          <strong>Pengendalian Hama Terpadu (PHT)</strong>, yaitu mengombinasikan
-          teknik budidaya, pengendalian hayati, mekanis, serta penggunaan pestisida
-          secara bijaksana apabila populasi hama telah melewati ambang ekonomi.
-          Pendekatan ini bertujuan menjaga produktivitas tanaman sekaligus
-          mempertahankan keseimbangan ekosistem sawah.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Monitoring dan Pengamatan Rutin</strong><br>
-            Lakukan pengamatan kondisi tanaman minimal satu kali setiap
-            minggu untuk mendeteksi gejala serangan hama maupun penyakit
-            sejak dini. Periksa daun, batang, malai, serta keberadaan
-            organisme pengganggu agar tindakan pengendalian dapat dilakukan
-            lebih cepat dan tepat.
-          </li>
-
-          <li>
-            <strong>Pengendalian Wereng Batang Coklat (WBC)</strong><br>
-            Kendalikan wereng menggunakan agen hayati seperti
-            <em>Beauveria bassiana</em> atau <em>Metarhizium anisopliae</em>.
-            Hindari pemberian pupuk nitrogen secara berlebihan dan terapkan
-            sistem tanam Jajar Legowo untuk meningkatkan sirkulasi udara
-            sehingga lingkungan kurang mendukung perkembangan wereng.
-          </li>
-
-          <li>
-            <strong>Pengendalian Tikus Sawah</strong><br>
-            Gunakan metode <em>Trap Barrier System (TBS)</em>, lakukan
-            gropyokan secara serentak pada awal musim tanam, serta
-            lestarikan predator alami seperti burung hantu
-            <em>Tyto alba</em>. Bersihkan pematang dan semak di sekitar
-            sawah agar tidak menjadi tempat persembunyian tikus.
-          </li>
-
-          <li>
-            <strong>Pencegahan Penyakit Tanaman</strong><br>
-            Untuk mengurangi risiko penyakit seperti blas dan hawar daun
-            bakteri, gunakan benih sehat, lakukan pemupukan berimbang, dan
-            hindari kelembapan yang terlalu tinggi. Agen hayati seperti
-            <em>Pseudomonas fluorescens</em> atau <em>Bacillus subtilis</em>
-            dapat diaplikasikan sejak fase persemaian sebagai upaya
-            pencegahan penyakit.
-          </li>
-
-          <li>
-            <strong>Penggunaan Pestisida Secara Bijaksana</strong><br>
-            Pestisida kimia hanya digunakan apabila populasi hama telah
-            mencapai ambang pengendalian. Gunakan pestisida sesuai dosis,
-            waktu, dan cara aplikasi yang dianjurkan untuk menghindari
-            resistensi hama, menjaga musuh alami, serta meminimalkan dampak
-            negatif terhadap lingkungan.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-scissors"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>9. Penyiangan dan Penyulaman</h3>
-
-        <p>
-          Penyiangan dan penyulaman merupakan kegiatan pemeliharaan yang
-          bertujuan menjaga populasi tanaman tetap optimal serta mengurangi
-          persaingan antara tanaman padi dan gulma dalam memperoleh air,
-          cahaya matahari, serta unsur hara. Pemeliharaan yang dilakukan
-          secara tepat waktu akan meningkatkan pertumbuhan anakan produktif
-          dan mendukung hasil panen yang lebih tinggi.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Penyulaman Tanaman</strong><br>
-            Lakukan penyulaman paling lambat pada umur
-            <strong>7–14 Hari Setelah Tanam (HST)</strong> menggunakan
-            bibit cadangan yang memiliki umur dan varietas yang sama.
-            Penyulaman bertujuan mengganti tanaman yang mati, rusak,
-            atau tumbuh tidak normal sehingga populasi tanaman tetap
-            seragam di seluruh petakan sawah.
-          </li>
-
-          <li>
-            <strong>Penyiangan Gulma</strong><br>
-            Bersihkan gulma yang tumbuh di sekitar tanaman karena gulma
-            dapat menjadi pesaing utama dalam penyerapan air, unsur hara,
-            dan cahaya matahari. Selain menurunkan hasil panen, gulma juga
-            dapat menjadi tempat berkembangnya berbagai hama dan penyakit.
-          </li>
-
-          <li>
-            <strong>Penyiangan Mekanis</strong><br>
-            Lakukan penyiangan sebanyak <strong>2–3 kali</strong>, umumnya
-            pada umur sekitar <strong>15 HST</strong> dan
-            <strong>30 HST</strong>, menggunakan alat seperti gasrok atau
-            landak. Penyiangan mekanis tidak hanya membersihkan gulma,
-            tetapi juga menggemburkan tanah sehingga aerasi di sekitar
-            perakaran menjadi lebih baik.
-          </li>
-
-          <li>
-            <strong>Pengelolaan Gulma Berkelanjutan</strong><br>
-            Lakukan pemeriksaan lahan secara rutin setelah penyiangan.
-            Gulma yang mulai tumbuh kembali sebaiknya segera dicabut agar
-            tidak berkembang dan menghasilkan biji yang dapat menjadi
-            sumber infestasi pada musim tanam berikutnya.
-          </li>
-
-          <li>
-            <strong>Menjaga Kondisi Lahan</strong><br>
-            Setelah penyiangan, atur kembali pengairan sesuai fase
-            pertumbuhan tanaman. Lahan yang bersih dari gulma dan memiliki
-            kondisi air yang baik akan meningkatkan efisiensi pemupukan,
-            mempercepat pertumbuhan tanaman, serta mengurangi risiko
-            serangan hama dan penyakit.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-wheat-awn"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>10. Panen</h3>
-
-        <p>
-          Panen merupakan tahap akhir dalam budidaya padi yang menentukan
-          kuantitas dan kualitas hasil produksi. Waktu panen yang tepat dapat
-          meminimalkan kehilangan hasil (<em>losses</em>), menjaga mutu gabah,
-          serta meningkatkan nilai jual. Oleh karena itu, panen harus
-          dilakukan berdasarkan tingkat kematangan tanaman, bukan hanya umur
-          tanaman.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Menentukan Waktu Panen</strong><br>
-            Panen dilakukan ketika sekitar <strong>90–95% malai telah
-              menguning</strong>, daun bendera mulai mengering, dan kadar air
-            gabah berkisar antara <strong>20–25%</strong>. Pada kondisi ini,
-            bulir telah terisi penuh sehingga menghasilkan gabah dengan
-            kualitas dan rendemen yang optimal.
-          </li>
-
-          <li>
-            <strong>Persiapan Sebelum Panen</strong><br>
-            Pastikan lahan telah dikeringkan sekitar
-            <strong>10–14 hari sebelum panen</strong> agar kondisi tanah
-            lebih stabil dan memudahkan proses pemanenan. Siapkan alat
-            panen, karung, terpal, serta tenaga kerja atau mesin panen
-            sesuai kebutuhan.
-          </li>
-
-          <li>
-            <strong>Metode Pemanenan</strong><br>
-            Pemanenan dapat dilakukan secara manual menggunakan sabit
-            bergerigi atau secara mekanis menggunakan
-            <em>Combine Harvester</em>. Penggunaan mesin panen lebih
-            efisien karena mampu memotong, merontokkan, membersihkan, dan
-            mengumpulkan gabah dalam satu proses sehingga kehilangan hasil
-            dapat ditekan.
-          </li>
-
-          <li>
-            <strong>Penanganan Gabah Setelah Dipanen</strong><br>
-            Gabah hasil panen sebaiknya segera dikumpulkan di tempat yang
-            bersih dan terlindung dari hujan maupun sinar matahari
-            berlebihan. Hindari penumpukan terlalu lama di lahan karena
-            dapat meningkatkan kadar air serta menurunkan kualitas gabah.
-          </li>
-
-          <li>
-            <strong>Mengurangi Kehilangan Hasil</strong><br>
-            Lakukan panen dengan hati-hati agar bulir tidak banyak yang
-            rontok atau tertinggal di lahan. Pengaturan waktu panen,
-            penggunaan alat yang sesuai, serta penanganan hasil yang cepat
-            merupakan langkah penting untuk menjaga kualitas gabah dan
-            memaksimalkan hasil produksi.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-warehouse"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>11. Pascapanen</h3>
-
-        <p>
-          Pascapanen merupakan tahap penanganan hasil panen setelah gabah
-          dipotong dari lahan. Penanganan yang cepat dan tepat sangat penting
-          untuk menjaga kualitas gabah, mengurangi kehilangan hasil, serta
-          mempertahankan nilai jual. Proses pascapanen yang baik juga
-          membantu mencegah kerusakan akibat kadar air yang tinggi, serangan
-          hama gudang, maupun pertumbuhan jamur selama penyimpanan.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Perontokan Gabah</strong><br>
-            Lakukan perontokan sesegera mungkin setelah panen menggunakan
-            <em>Power Thresher</em> atau <em>Combine Harvester</em>. Proses
-            yang cepat dapat mengurangi kehilangan hasil dan mencegah
-            terjadinya fermentasi pada gabah yang masih menempel pada
-            malai.
-          </li>
-
-          <li>
-            <strong>Pembersihan dan Sortasi</strong><br>
-            Pisahkan gabah dari kotoran seperti jerami, daun, batu,
-            maupun gabah hampa menggunakan alat penampi atau mesin
-            pembersih gabah. Sortasi yang baik akan menghasilkan gabah
-            dengan kualitas yang lebih seragam dan meningkatkan nilai jual.
-          </li>
-
-          <li>
-            <strong>Pengeringan Gabah</strong><br>
-            Keringkan gabah di atas lantai jemur atau menggunakan
-            <em>Vertical Dryer</em> hingga kadar air mencapai sekitar
-            <strong>14%</strong>. Pengeringan yang merata akan menghambat
-            pertumbuhan jamur, menjaga kualitas beras, serta memperpanjang
-            daya simpan gabah.
-          </li>
-
-          <li>
-            <strong>Penyimpanan</strong><br>
-            Simpan gabah di gudang yang bersih, kering, memiliki ventilasi
-            yang baik, dan terlindung dari hujan maupun sinar matahari
-            langsung. Gunakan alas berupa palet kayu agar karung gabah
-            tidak bersentuhan langsung dengan lantai yang lembap, sehingga
-            risiko kerusakan dan serangan hama gudang dapat diminimalkan.
-          </li>
-
-          <li>
-            <strong>Pengendalian Mutu</strong><br>
-            Lakukan pemeriksaan secara berkala terhadap kadar air,
-            kebersihan, dan kondisi penyimpanan. Pastikan tidak terdapat
-            tanda-tanda serangan hama gudang, jamur, atau kerusakan pada
-            kemasan. Pengendalian mutu yang baik akan menjaga kualitas
-            gabah hingga siap dipasarkan atau digiling menjadi beras.
-          </li>
-        </ul>
-      </div>
-    </div>
-
-  </section>
+  <section id="budidayapadi"></section>
 
   <!-- ================= KALKULATOR ================= -->
-  <section id="kalkulator" class="section calculator">
-
-    <h2>Kalkulator Kebutuhan Benih &amp; Pupuk</h2>
-
-    <div class="calculator-box">
-
-      <label>Luas Lahan (Hektar)</label>
-
-      <input type="number" id="luasLahan" placeholder="Contoh: 1" step="0.1">
-
-      <button onclick="hitungKebutuhan()">
-        Hitung Kebutuhan
-      </button>
-
-      <div id="hasilKalkulator"></div>
-
-    </div>
-
-  </section>
+  <section id="calculator"></section>
 
   <!-- ================= PEMUPUKAN ================= -->
-  <section id="pemupukan" class="section">
-
-    <h2>Pemupukan Berimbang dan Organik</h2>
-
-    <table class="fertilizer-table">
-
-      <thead>
-        <tr>
-          <th>Umur Tanaman</th>
-          <th>Jenis Pupuk</th>
-          <th>Dosis / Ha</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>Pra Tanam</td>
-          <td>Pupuk Organik</td>
-          <td>5-10 Ton</td>
-        </tr>
-
-        <tr>
-          <td>0 HST</td>
-          <td>SP-36</td>
-          <td>100 Kg</td>
-        </tr>
-
-        <tr>
-          <td>15 HST</td>
-          <td>Urea</td>
-          <td>100 Kg</td>
-        </tr>
-
-        <tr>
-          <td>30 HST</td>
-          <td>Urea + NPK</td>
-          <td>150 Kg + 150 Kg</td>
-        </tr>
-
-      </tbody>
-
-    </table>
-
-  </section>
+  <section id="pemupukan"></section>
 
   <section id="harga" class="section market-section">
 
@@ -1053,46 +260,133 @@
 
 
   <!-- ================= SUMBER ================= -->
-  <section id="sumber" class="section">
+  <section id="sumber" class="py-5 bg-light">
 
-    <h2>Sumber Referensi</h2>
+    <div class="container">
 
-    <div class="reference-grid">
-
-      <div class="reference-card">
-        <h3>Kementerian Pertanian RI</h3>
-        <p>
-          <a href="https://www.pertanian.go.id" target="_blank" rel="noopener noreferrer">
-            www.pertanian.go.id
-          </a>
+      <!-- Judul Section -->
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-success">
+          📚 Sumber Referensi
+        </h2>
+        <p class="text-muted">
+          Referensi terpercaya untuk mendukung informasi budidaya pertanian modern.
         </p>
       </div>
 
-      <div class="reference-card">
-        <h3>Balai Besar Penelitian Tanaman Padi</h3>
-        <p>
-          <a href="https://bbpadi.pertanian.go.id" target="_blank" rel="noopener noreferrer">
-            bbpadi.pertanian.go.id
-          </a>
-        </p>
-      </div>
 
-      <div class="reference-card">
-        <h3>FAO</h3>
-        <p>
-          <a href="https://www.fao.org" target="_blank" rel="noopener noreferrer">
-            www.fao.org
-          </a>
-        </p>
-      </div>
+      <div class="row g-4">
 
-      <div class="reference-card">
-        <h3>IRRI</h3>
-        <p>
-          <a href="https://www.irri.org" target="_blank" rel="noopener noreferrer">
-            www.irri.org
-          </a>
-        </p>
+        <!-- Kementan -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm reference-card">
+            <div class="card-body text-center">
+
+              <div class="fs-1 mb-3">
+                🌾
+              </div>
+
+              <h5 class="card-title fw-bold">
+                Kementerian Pertanian RI
+              </h5>
+
+              <p class="card-text text-muted">
+                Informasi kebijakan dan teknologi pertanian nasional.
+              </p>
+
+              <a href="https://www.pertanian.go.id" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">
+                Kunjungi Website
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- BB Padi -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm reference-card">
+
+            <div class="card-body text-center">
+
+              <div class="fs-1 mb-3">
+                🌱
+              </div>
+
+              <h5 class="card-title fw-bold">
+                Balai Besar Penelitian Tanaman Padi
+              </h5>
+
+              <p class="card-text text-muted">
+                Referensi penelitian dan inovasi teknologi tanaman padi.
+              </p>
+
+              <a href="https://bbpadi.pertanian.go.id" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">
+                Kunjungi Website
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- FAO -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm reference-card">
+
+            <div class="card-body text-center">
+
+              <div class="fs-1 mb-3">
+                🌍
+              </div>
+
+              <h5 class="card-title fw-bold">
+                FAO
+              </h5>
+
+              <p class="card-text text-muted">
+                Organisasi pangan dan pertanian dunia.
+              </p>
+
+              <a href="https://www.fao.org" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">
+                Kunjungi Website
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- IRRI -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm reference-card">
+
+            <div class="card-body text-center">
+
+              <div class="fs-1 mb-3">
+                🔬
+              </div>
+
+              <h5 class="card-title fw-bold">
+                IRRI
+              </h5>
+
+              <p class="card-text text-muted">
+                Lembaga penelitian padi internasional.
+              </p>
+
+              <a href="https://www.irri.org" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">
+                Kunjungi Website
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+
       </div>
 
     </div>
@@ -1135,155 +429,12 @@
     </div>
 
   </div>
-
+  <div id="contact"></div>
   <!-- ================= FOOTER ================= -->
-  <footer class="footer">
-
-    <div class="footer-container">
-
-      <!-- Brand -->
-      <div class="footer-brand">
-        <h2>TaniCerdas</h2>
-        <p>Platform Digital Budidaya Padi Modern berbasis teknologi dan informasi pertanian berkelanjutan.</p>
-      </div>
-
-      <!-- Divider -->
-      <div class="footer-divider"></div>
-
-      <!-- Credit -->
-      <div class="footer-credit">
-        <h3>Dikembangkan Oleh</h3>
-        <h2 class="name">Aisyah Nuraini Nugrahaning Dwi</h2>
-
-        <p>
-          Mahasiswa Program Studi <br>
-          <strong>Penyuluhan Pertanian Berkelanjutan</strong>
-        </p>
-
-        <p>
-          Politeknik Pembangunan Pertanian<br>
-          Yogyakarta–Magelang
-        </p>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2026 TaniCerdas — All Rights Reserved</p>
-    </div>
-
-  </footer>
-  <script>
-    function hitungKebutuhan() {
-      const luas = parseFloat(document.getElementById("luasLahan").value);
-      const hasil = document.getElementById("hasilKalkulator");
-
-      if (isNaN(luas) || luas <= 0) {
-        hasil.innerHTML = "⚠️ Masukkan luas lahan yang valid!";
-        return;
-      }
-
-      // ===== KONSTANTA (PADI) =====
-      const benihPerHa = 25; // kg/ha
-      const pupukOrganik = 3000; // kg/ha (3 ton rata-rata)
-      const urea = 150; // kg/ha total
-      const npk = 300; // kg/ha total
-
-      // ===== HITUNG =====
-      const benih = luas * benihPerHa;
-      const organik = luas * pupukOrganik;
-      const ureaTotal = luas * urea;
-      const npkTotal = luas * npk;
-
-      // ===== OUTPUT =====
-      hasil.innerHTML = `
-    🌾 <b>Hasil Perhitungan (${luas} Ha)</b><br><br>
-
-    🌱 Benih: <b>${benih.toFixed(1)} kg</b><br>
-    🌿 Pupuk Organik: <b>${(organik/1000).toFixed(2)} ton</b><br>
-    🧪 Urea: <b>${ureaTotal.toFixed(1)} kg</b><br>
-    🧪 NPK: <b>${npkTotal.toFixed(1)} kg</b><br><br>
-
-    📌 Estimasi ini berdasarkan standar umum budidaya padi modern.
-  `;
-    }
-  </script>
-  <script>
-    function openAI() {
-      document.getElementById("aiModal").style.display = "flex";
-    }
-
-    function closeAI() {
-      document.getElementById("aiModal").style.display = "none";
-    }
-
-    function sendQuestion() {
-      const input = document.getElementById("userQuestion");
-      const chat = document.getElementById("chatMessages");
-
-      const text = input.value.trim();
-
-      if (text === "") {
-        return;
-      }
-
-      // tampilkan pesan user
-      chat.innerHTML += `
-    <div class="user-message">${text}</div>
-  `;
-
-      // respon AI sederhana (rule-based)
-      let response = getAIResponse(text.toLowerCase());
-
-      setTimeout(() => {
-        chat.innerHTML += `
-      <div class="bot-message">${response}</div>
-    `;
-        chat.scrollTop = chat.scrollHeight;
-      }, 500);
-
-      input.value = "";
-    }
-
-    // ================= AI LOGIC SEDERHANA =================
-    function getAIResponse(q) {
-
-      if (q.includes("urea")) {
-        return "🌾 Urea berfungsi sebagai sumber nitrogen untuk pertumbuhan daun padi.";
-      }
-
-      if (q.includes("wereng")) {
-        return "🐛 Wereng dapat dikendalikan dengan PHT seperti Beauveria bassiana dan musuh alami.";
-      }
-
-      if (q.includes("legowo")) {
-        return "🌱 Jajar Legowo meningkatkan cahaya dan hasil produksi padi.";
-      }
-
-      if (q.includes("pupuk")) {
-        return "🧪 Gunakan pupuk berimbang: organik + NPK + urea sesuai fase tanaman.";
-      }
-
-      if (q.includes("panen")) {
-        return "🌾 Panen dilakukan saat 90–95% malai menguning dengan kadar air 20–25%.";
-      }
-
-      return "🤖 Maaf, saya masih belajar. Coba tanya tentang pupuk, wereng, legowo, atau panen.";
-    }
-
-    // ENTER untuk kirim
-    document.addEventListener("keydown", function(e) {
-      if (e.key === "Enter") {
-        sendQuestion();
-      }
-    });
-  </script>
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("navMenu");
-      menu.classList.toggle("active");
-    }
-  </script>
+  <div id="footer"></div>
+  <script src="./include.js"></script>
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -4,54 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>TaniCerdas | Budidaya Cabe Modern</title>
+  <title>TaniCerdas | Platform Digital Budidaya Padi Modern</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
   <!-- ================= HEADER ================= -->
 
-  <header class="header">
-
-    <nav class="navbar">
-
-      <div class="logo">
-        <i class="fas fa-pepper-hot"></i>
-        <a href="index.html">TaniCerdas</a>
-      </div>
-
-      <!-- MENU -->
-      <ul class="nav-menu" id="navMenu">
-
-        <li><a href="index.html">Budidaya Padi</a></li>
-        <li><a href="cabe.html">Budidaya Cabe</a></li>
-        <li><a href="#kalkulator">Kalkulator</a></li>
-        <li><a href="#pemupukan">Pemupukan</a></li>
-        <li><a href="#video">Video</a></li>
-        <li><a href="#sumber">Referensi</a></li>
-
-      </ul>
-
-      <!-- BUTTON HAMBURGER -->
-      <button class="mobile-menu-btn" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </button>
-
-    </nav>
-
-  </header>
-
+  <div id="header"></div>
   <!-- ================= HERO ================= -->
 
   <section class="hero2">
@@ -62,7 +34,7 @@
 
       <h1>🌶️ Cabe</h1>
 
-      <h2>Panduan Budidaya Cabe Modern</h2>
+      <h2>Panduan Budidaya Cabe</h2>
 
       <p>
 
@@ -166,881 +138,242 @@
   </section>
 
   <!-- ================= BUDIDAYA ================= -->
+  <div id="budidayacabe"></div>
 
-  <section id="budidaya" class="section">
 
-    <div class="section-header">
+  <div id="calculator"></div>
+  <!-- ================= PEMUPUKAN ================= -->
+  <div id="pemupukancabe"></div>
 
-      <h2>
-        Budidaya Cabe Lengkap
-      </h2>
+  <!-- AI BUTTON -->
+  <div class="ai-floating-btn" onclick="openAI()">
+    <i class="fas fa-robot"></i>
+  </div>
 
-      <p>
+  <!-- AI MODAL -->
+  <div class="ai-modal" id="aiModal">
 
-        Panduan budidaya cabe berdasarkan
-        Good Agricultural Practices (GAP).
+    <div class="ai-content">
 
-      </p>
-
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-tractor"></i>
+      <div class="ai-header">
+        <h3>🌶️ Penyuluh AI Cabai</h3>
+        <button onclick="closeAI()">✕</button>
       </div>
 
-      <div class="timeline-content">
-        <h3>1. Persiapan Lahan</h3>
+      <div id="chatMessages" class="chat-messages">
 
-        <p>
-          Persiapan lahan cabai bertujuan menciptakan media tumbuh yang gembur,
-          subur, memiliki drainase baik, serta bebas dari gulma dan patogen tanah.
-          Tahap ini sangat menentukan keberhasilan pertumbuhan awal tanaman cabai.
-        </p>
+        <div class="bot-message">
+          Halo, saya Penyuluh AI Cabai 🌶️
+          Tanyakan tentang pupuk, hama (thrips, kutu daun), penyakit, atau panen cabai.
+        </div>
 
-        <ul>
-          <li>
-            <strong>Pengolahan Tanah</strong><br>
-            Cangkul atau bajak tanah sedalam ±30 cm untuk memperbaiki struktur tanah.
-            Bentuk bedengan lebar 100–110 cm, tinggi 40–50 cm (musim hujan), dan
-            parit antar bedengan 50–60 cm untuk drainase.
-          </li>
-
-          <li>
-            <strong>Pemasangan Mulsa Plastik Hitam Perak (MPHP)</strong><br>
-            Pasang mulsa dengan sisi perak menghadap ke atas untuk memantulkan cahaya
-            dan mengusir hama, sedangkan sisi hitam ke bawah untuk menekan gulma dan
-            menjaga kelembapan tanah.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-flask"></i>
       </div>
 
-      <div class="timeline-content">
-        <h3>2. Pemupukan Dasar</h3>
+      <div class="chat-input">
 
-        <p>
-          Pemupukan dasar bertujuan menyediakan unsur hara awal bagi tanaman cabai
-          agar pertumbuhan akar dan vegetatif berjalan optimal sejak awal tanam.
-        </p>
+        <input type="text" id="userQuestion" placeholder="Tulis pertanyaan tentang cabai...">
 
-        <ul>
-          <li>
-            <strong>Organik & Kapur</strong><br>
-            Gunakan pupuk kandang/kompos 10–15 ton/ha. Jika pH rendah (<5,5), tambahkan dolomit 1–2 ton/ha untuk menetralkan tanah. </li>
-
-          <li>
-            <strong>Pupuk Makro Dasar</strong><br>
-            Berikan NPK 150–200 kg/ha dan SP-36 ±100 kg/ha sebelum bedengan ditutup mulsa.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-seedling"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>3. Pemilihan Benih</h3>
-
-        <p>
-          Benih cabai yang baik menentukan produktivitas tanaman, ketahanan terhadap
-          penyakit, dan keseragaman pertumbuhan di lapangan.
-        </p>
-
-        <ul>
-          <li>
-            Gunakan benih cabai hibrida (F1) seperti Lado, Imola, atau Gada.
-          </li>
-
-          <li>
-            Pilih benih dengan daya kecambah minimal 85%.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-leaf"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>4. Penyemaian</h3>
-
-        <p>
-          Penyemaian dilakukan untuk menghasilkan bibit cabai yang sehat, kuat,
-          dan siap pindah tanam di lahan utama.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Media Semai</strong><br>
-            Campuran tanah, kompos, dan arang sekam (2:1:1) dimasukkan ke tray atau polybag.
-          </li>
-
-          <li>
-            <strong>Perlakuan Benih</strong><br>
-            Rendam benih dalam air hangat 45–50°C + ekstrak bawang merah selama 2–3 jam.
-          </li>
-
-          <li>
-            Bibit siap pindah tanam umur 21–25 hari (4–5 daun sejati).
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-ruler-combined"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>5. Penanaman</h3>
-
-        <p>
-          Penanaman cabai merupakan tahap pemindahan bibit dari persemaian ke lahan utama.
-          Tahap ini sangat menentukan keberhasilan awal pertumbuhan karena bibit masih
-          dalam fase adaptasi terhadap lingkungan baru. Penanaman yang benar akan
-          mengurangi stres tanaman, mempercepat pertumbuhan akar, serta meningkatkan
-          produktivitas tanaman cabai.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Waktu Penanaman</strong><br>
-            Penanaman sebaiknya dilakukan pada sore hari atau pagi hari untuk
-            menghindari stres panas (heat stress) pada bibit. Kondisi suhu yang
-            lebih rendah membantu tanaman beradaptasi lebih cepat setelah pindah tanam.
-          </li>
-
-          <li>
-            <strong>Jarak Tanam</strong><br>
-            Gunakan jarak tanam zig-zag atau ganda sekitar <strong>60 × 60 cm</strong>
-            atau <strong>60 × 70 cm</strong> agar tanaman memiliki ruang tumbuh yang cukup,
-            sirkulasi udara baik, serta mengurangi risiko penyebaran penyakit.
-          </li>
-
-          <li>
-            <strong>Pembuatan Lubang Tanam</strong><br>
-            Lubang dibuat pada mulsa plastik hitam perak sesuai jarak tanam yang telah
-            ditentukan. Pastikan lubang tidak terlalu besar agar kelembapan tanah tetap
-            terjaga dan gulma tidak mudah tumbuh.
-          </li>
-
-          <li>
-            <strong>Teknik Pindah Tanam</strong><br>
-            Bibit dikeluarkan dari media semai secara hati-hati agar akar tidak rusak.
-            Tanam bibit bersama media semainya ke dalam lubang, lalu padatkan tanah
-            secara perlahan di sekitar batang untuk memperkuat posisi tanaman.
-          </li>
-
-          <li>
-            <strong>Perawatan Awal</strong><br>
-            Setelah penanaman, lakukan penyiraman secukupnya untuk menjaga kelembapan
-            tanah. Hindari genangan air yang berlebihan karena dapat menyebabkan
-            busuk akar pada fase awal pertumbuhan.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-water"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>6. Pengairan dan Irigasi</h3>
-
-        <p>
-          Pengairan pada tanaman cabai harus dikelola dengan hati-hati karena cabai
-          sangat sensitif terhadap kelebihan air. Air yang cukup akan mendukung
-          pertumbuhan vegetatif dan pembentukan buah, tetapi genangan dapat menyebabkan
-          busuk akar dan penurunan hasil.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Sistem Irigasi Parit</strong><br>
-            Air dialirkan ke parit antar bedengan hingga mencapai ±2/3 tinggi bedengan,
-            kemudian dibiarkan meresap secara alami ke zona perakaran.
-          </li>
-
-          <li>
-            <strong>Frekuensi Pengairan</strong><br>
-            Lakukan pengairan 1–2 kali per minggu tergantung kondisi cuaca dan kelembapan tanah.
-          </li>
-
-          <li>
-            <strong>Pencegahan Genangan</strong><br>
-            Segera buang sisa air di parit setelah tanah cukup lembap untuk mencegah
-            pembusukan akar.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-spray-can"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>7. Pemupukan Susulan</h3>
-
-        <p>
-          Pemupukan susulan bertujuan memenuhi kebutuhan nutrisi tanaman pada fase
-          pertumbuhan vegetatif hingga generatif agar produksi buah maksimal.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Fase Vegetatif (1–4 MST)</strong><br>
-            Larutan NPK 2–3 kg dalam 200 liter air, diberikan 200 ml per tanaman setiap 7–10 hari.
-          </li>
-
-          <li>
-            <strong>Fase Generatif (5–12 MST)</strong><br>
-            Tambahkan unsur Kalium (KNO₃) dan Kalsium (CaNO₃) untuk meningkatkan kualitas buah
-            dan mencegah kerontokan bunga.
-          </li>
-
-          <li>
-            <strong>Aplikasi Kocor</strong><br>
-            Lakukan penyiraman pupuk cair langsung ke pangkal tanaman agar penyerapan lebih efektif.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-bug"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>8. Pengendalian Hama dan Penyakit</h3>
-
-        <p>
-          Pengendalian hama dan penyakit dilakukan dengan pendekatan terpadu untuk
-          menjaga tanaman tetap sehat tanpa merusak keseimbangan lingkungan.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Kutu Kebul & Thrips</strong><br>
-            Gunakan perangkap likat kuning (40–50 unit/ha) dan semprot insektisida nabati
-            berbahan aktif ekstrak nimba (azadirachtin).
-          </li>
-
-          <li>
-            <strong>Antraknosa (Patek)</strong><br>
-            Gunakan agen hayati seperti Bacillus subtilis atau Trichoderma sejak awal tanam.
-          </li>
-
-          <li>
-            <strong>Sanitasi Lahan</strong><br>
-            Buang buah terserang dan bakar di luar area kebun untuk mencegah penyebaran penyakit.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-seedling"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>9. Penyiangan dan Penopang Tanaman</h3>
-
-        <p>
-          Tahap ini bertujuan menjaga pertumbuhan tanaman tetap optimal dengan
-          mengurangi gulma, memperkuat batang, dan mengarahkan pertumbuhan tanaman
-          agar lebih produktif.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Penyiangan Gulma</strong><br>
-            Lakukan pengendalian gulma secara rutin agar tidak bersaing dengan tanaman cabai
-            dalam menyerap nutrisi dan air.
-          </li>
-
-          <li>
-            <strong>Pemasangan Ajir</strong><br>
-            Pasang ajir bambu setinggi 1,2–1,5 m sebelum tanaman berumur 14 HST,
-            kemudian ikat batang dengan tali rafia berbentuk angka 8.
-          </li>
-
-          <li>
-            <strong>Pewiwilan</strong><br>
-            Buang tunas air di bawah cabang utama agar nutrisi fokus pada pertumbuhan
-            buah dan cabang produktif.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-wheat-awn"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>10. Panen</h3>
-
-        <p>
-          Panen cabai dilakukan pada saat buah mencapai tingkat kematangan yang sesuai
-          dengan tujuan pasar. Waktu panen yang tepat sangat berpengaruh terhadap
-          kualitas, daya simpan, dan harga jual cabai di pasaran.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Kriteria Panen</strong><br>
-            Cabai dipanen saat 80–90% matang (merah bercampur hijau) untuk distribusi
-            jarak jauh, atau merah penuh untuk konsumsi lokal.
-          </li>
-
-          <li>
-            <strong>Frekuensi Panen</strong><br>
-            Panen dilakukan secara bertahap setiap 3–5 hari sekali karena buah cabai
-            tidak matang secara serentak.
-          </li>
-
-          <li>
-            <strong>Teknik Pemanenan</strong><br>
-            Petik buah menggunakan tangan atau gunting kecil dengan menyertakan tangkai
-            agar kualitas buah tetap terjaga dan tidak cepat busuk.
-          </li>
-
-          <li>
-            <strong>Penanganan Awal</strong><br>
-            Hindari menumpuk cabai terlalu lama di lapangan untuk mencegah kerusakan
-            akibat panas dan tekanan fisik.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon">
-        <i class="fas fa-warehouse"></i>
-      </div>
-
-      <div class="timeline-content">
-        <h3>11. Pasca Panen</h3>
-
-        <p>
-          Penanganan pasca panen sangat penting untuk menjaga kualitas cabai agar tetap
-          segar, bernilai jual tinggi, dan tidak mudah rusak selama distribusi hingga
-          ke konsumen.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Sortasi dan Grading</strong><br>
-            Pisahkan cabai berdasarkan kualitas, ukuran, dan tingkat kematangan untuk
-            mendapatkan keseragaman produk.
-          </li>
-
-          <li>
-            <strong>Pembersihan</strong><br>
-            Buang cabai yang cacat, busuk, atau terserang hama untuk menjaga kualitas
-            keseluruhan hasil panen.
-          </li>
-
-          <li>
-            <strong>Pengemasan</strong><br>
-            Gunakan kemasan berlubang seperti keranjang plastik atau karung jala
-            (mesh bag) agar sirkulasi udara tetap baik dan cabai tidak cepat lembap.
-          </li>
-
-          <li>
-            <strong>Penyimpanan dan Distribusi</strong><br>
-            Simpan cabai di tempat sejuk dan hindari paparan sinar matahari langsung.
-            Distribusikan secepat mungkin untuk mempertahankan kesegaran dan nilai jual.
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <section id="kalkulator" class="section calculator">
-
-      <h2>Kalkulator Kebutuhan Benih &amp; Pupuk</h2>
-
-      <div class="calculator-box">
-
-        <label>Luas Lahan (Hektar)</label>
-
-        <input type="number" id="luasLahan" placeholder="Contoh: 1" step="0.1">
-
-        <button onclick="hitungKebutuhan()">
-          Hitung Kebutuhan
+        <button onclick="sendQuestion()">
+          Kirim
         </button>
 
-        <div id="hasilKalkulator"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ================= AI CHAT ================= -->
+  <!-- AI BUTTON -->
+  <div class="ai-floating-btn" onclick="openAI()">
+    <i class="fas fa-robot"></i>
+  </div>
+
+  <!-- AI MODAL -->
+  <div class="ai-modal" id="aiModal">
+
+    <div class="ai-content">
+
+      <div class="ai-header">
+        <h3>🌶️ Penyuluh AI Cabai</h3>
+        <button onclick="closeAI()">✕</button>
+      </div>
+
+      <div id="chatMessages" class="chat-messages">
+
+        <div class="bot-message">
+          Halo, saya Penyuluh AI Cabai 🌶️
+          Tanyakan tentang pupuk, hama (thrips, kutu daun), penyakit, atau panen cabai.
+        </div>
 
       </div>
 
-    </section>
-    <!-- ================= PEMUPUKAN ================= -->
-    <section id="pemupukan" class="section">
+      <div class="chat-input">
 
-      <h2>Pemupukan Berimbang Budidaya Cabai</h2>
+        <input type="text" id="userQuestion" placeholder="Tulis pertanyaan tentang cabai...">
 
-      <table class="fertilizer-table">
-
-        <thead>
-          <tr>
-            <th>Umur Tanaman</th>
-            <th>Jenis Pupuk</th>
-            <th>Dosis / Ha</th>
-          </tr>
-        </thead>
-
-        <tbody>
-
-          <tr>
-            <td>Pra Tanam</td>
-            <td>Pupuk Organik (Kompos/Kandang)</td>
-            <td>10–20 Ton</td>
-          </tr>
-
-          <tr>
-            <td>7 HST</td>
-            <td>NPK Dasar</td>
-            <td>150–200 Kg</td>
-          </tr>
-
-          <tr>
-            <td>14 HST</td>
-            <td>Urea</td>
-            <td>100 Kg</td>
-          </tr>
-
-          <tr>
-            <td>30 HST</td>
-            <td>NPK + KCl</td>
-            <td>150 Kg + 100 Kg</td>
-          </tr>
-
-          <tr>
-            <td>45 HST</td>
-            <td>KNO₃ / KCl Susulan</td>
-            <td>100 Kg</td>
-          </tr>
-
-        </tbody>
-
-      </table>
-
-    </section>
-
-    <!-- AI BUTTON -->
-    <div class="ai-floating-btn" onclick="openAI()">
-      <i class="fas fa-robot"></i>
-    </div>
-
-    <!-- AI MODAL -->
-    <div class="ai-modal" id="aiModal">
-
-      <div class="ai-content">
-
-        <div class="ai-header">
-          <h3>🌶️ Penyuluh AI Cabai</h3>
-          <button onclick="closeAI()">✕</button>
-        </div>
-
-        <div id="chatMessages" class="chat-messages">
-
-          <div class="bot-message">
-            Halo, saya Penyuluh AI Cabai 🌶️
-            Tanyakan tentang pupuk, hama (thrips, kutu daun), penyakit, atau panen cabai.
-          </div>
-
-        </div>
-
-        <div class="chat-input">
-
-          <input type="text" id="userQuestion" placeholder="Tulis pertanyaan tentang cabai...">
-
-          <button onclick="sendQuestion()">
-            Kirim
-          </button>
-
-        </div>
+        <button onclick="sendQuestion()">
+          Kirim
+        </button>
 
       </div>
 
     </div>
 
+  </div>
 
+  <section id="harga" class="section market-section">
 
-    <!-- ================= AI CHAT ================= -->
-    <!-- AI BUTTON -->
-    <div class="ai-floating-btn" onclick="openAI()">
-      <i class="fas fa-robot"></i>
+    <div class="section-header">
+      <h2><i class="fas fa-chart-line"></i> Harga Pasar Komoditas Cabai</h2>
+
+      <p>
+        Simulasi informasi harga cabai sebagai referensi petani dalam menentukan
+        strategi budidaya dan pemasaran hasil panen.
+      </p>
     </div>
 
-    <!-- AI MODAL -->
-    <div class="ai-modal" id="aiModal">
+    <div class="price-grid">
 
-      <div class="ai-content">
+      <div class="price-card">
 
-        <div class="ai-header">
-          <h3>🌶️ Penyuluh AI Cabai</h3>
-          <button onclick="closeAI()">✕</button>
+        <div class="price-icon">
+          🌶️
         </div>
 
-        <div id="chatMessages" class="chat-messages">
+        <h3>Cabai Merah Keriting</h3>
 
-          <div class="bot-message">
-            Halo, saya Penyuluh AI Cabai 🌶️
-            Tanyakan tentang pupuk, hama (thrips, kutu daun), penyakit, atau panen cabai.
-          </div>
+        <h1 id="cabaiKeritingPrice">
+          Rp 45.000/kg
+        </h1>
 
-        </div>
+        <span class="price-up">
+          ▲ Naik Rp2.000
+        </span>
 
-        <div class="chat-input">
-
-          <input type="text" id="userQuestion" placeholder="Tulis pertanyaan tentang cabai...">
-
-          <button onclick="sendQuestion()">
-            Kirim
-          </button>
-
-        </div>
+        <small>Update Hari Ini</small>
 
       </div>
+
+
+      <div class="price-card">
+
+        <div class="price-icon">
+          🌶️
+        </div>
+
+        <h3>Cabai Rawit Merah</h3>
+
+        <h1 id="cabaiRawitPrice">
+          Rp 55.000/kg
+        </h1>
+
+        <span class="price-down">
+          ▼ Turun Rp1.500
+        </span>
+
+        <small>Update Hari Ini</small>
+
+      </div>
+
+
+      <div class="price-card">
+
+        <div class="price-icon">
+          🌶️
+        </div>
+
+        <h3>Cabai Merah Besar</h3>
+
+        <h1>
+          Rp 40.000/kg
+        </h1>
+
+        <span class="price-stable">
+          ● Stabil
+        </span>
+
+        <small>Simulasi Harga</small>
+
+      </div>
+
+
+      <div class="price-card">
+
+        <div class="price-icon">
+          🌶️
+        </div>
+
+        <h3>Cabai Hijau</h3>
+
+        <h1>
+          Rp 25.000/kg
+        </h1>
+
+        <span class="price-up">
+          ▲ Naik Rp1.000
+        </span>
+
+        <small>Simulasi Harga</small>
+
+      </div>
+
 
     </div>
 
-    <section id="harga" class="section market-section">
+  </section>
 
-      <div class="section-header">
-        <h2><i class="fas fa-chart-line"></i> Harga Pasar Komoditas Cabai</h2>
+  <section id="video" class="section">
 
-        <p>
-          Simulasi informasi harga cabai sebagai referensi petani dalam menentukan
-          strategi budidaya dan pemasaran hasil panen.
-        </p>
+    <div class="section-header">
+      <h2>🎥 Video Tutorial Budidaya Cabai</h2>
+      <p>
+        Kumpulan video pembelajaran budidaya cabai, pengendalian hama,
+        pemupukan organik, dan teknologi pertanian modern.
+      </p>
+    </div>
+
+    <div class="video-grid">
+
+      <!-- Video 1 -->
+      <div class="video-card">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/f4ieFWFsvRA" title="Cara Membuat Perangkap Likat Kuning" frameborder="0" allowfullscreen>
+        </iframe>
+
+        <div class="video-info">
+          <h3>🟡 Perangkap Likat Kuning</h3>
+          <p>
+            Tutorial pembuatan perangkap likat kuning sebagai salah satu cara
+            pengendalian hama tanaman dengan memanfaatkan warna kuning untuk menarik
+            dan menangkap serangga pengganggu secara efektif.
+          </p>
+        </div>
       </div>
 
-      <div class="price-grid">
+      <!-- Video 2 -->
+      <div class="video-card">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/vS7ZkS8DU44" title="Pupuk Kocor Organik dan Trichoderma" frameborder="0" allowfullscreen>
+        </iframe>
 
-        <div class="price-card">
-
-          <div class="price-icon">
-            🌶️
-          </div>
-
-          <h3>Cabai Merah Keriting</h3>
-
-          <h1 id="cabaiKeritingPrice">
-            Rp 45.000/kg
-          </h1>
-
-          <span class="price-up">
-            ▲ Naik Rp2.000
-          </span>
-
-          <small>Update Hari Ini</small>
-
+        <div class="video-info">
+          <h3>🧪 pestisida organik ramah lingkungan</h3>
+          <p>
+            Pengendalian keriting daun cabai dengan pestisida organik dari kunyit
+          </p>
         </div>
-
-
-        <div class="price-card">
-
-          <div class="price-icon">
-            🌶️
-          </div>
-
-          <h3>Cabai Rawit Merah</h3>
-
-          <h1 id="cabaiRawitPrice">
-            Rp 55.000/kg
-          </h1>
-
-          <span class="price-down">
-            ▼ Turun Rp1.500
-          </span>
-
-          <small>Update Hari Ini</small>
-
-        </div>
-
-
-        <div class="price-card">
-
-          <div class="price-icon">
-            🌶️
-          </div>
-
-          <h3>Cabai Merah Besar</h3>
-
-          <h1>
-            Rp 40.000/kg
-          </h1>
-
-          <span class="price-stable">
-            ● Stabil
-          </span>
-
-          <small>Simulasi Harga</small>
-
-        </div>
-
-
-        <div class="price-card">
-
-          <div class="price-icon">
-            🌶️
-          </div>
-
-          <h3>Cabai Hijau</h3>
-
-          <h1>
-            Rp 25.000/kg
-          </h1>
-
-          <span class="price-up">
-            ▲ Naik Rp1.000
-          </span>
-
-          <small>Simulasi Harga</small>
-
-        </div>
-
-
       </div>
+    </div>
+  </section>
 
-    </section>
+  <!-- ================= SUMBER ================= -->
+  <section id="sumber"></section>
 
-    <section id="video" class="section">
-
-      <div class="section-header">
-        <h2>🎥 Video Tutorial Budidaya Cabai</h2>
-        <p>
-          Kumpulan video pembelajaran budidaya cabai, pengendalian hama,
-          pemupukan organik, dan teknologi pertanian modern.
-        </p>
-      </div>
-
-      <div class="video-grid">
-
-        <!-- Video 1 -->
-        <div class="video-card">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/f4ieFWFsvRA" title="Cara Membuat Perangkap Likat Kuning" frameborder="0" allowfullscreen>
-          </iframe>
-
-          <div class="video-info">
-            <h3>🟡 Perangkap Likat Kuning</h3>
-            <p>
-              Tutorial pembuatan perangkap likat kuning sebagai salah satu cara
-              pengendalian hama tanaman dengan memanfaatkan warna kuning untuk menarik
-              dan menangkap serangga pengganggu secara efektif.
-            </p>
-          </div>
-        </div>
-
-        <!-- Video 2 -->
-        <div class="video-card">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/vS7ZkS8DU44" title="Pupuk Kocor Organik dan Trichoderma" frameborder="0" allowfullscreen>
-          </iframe>
-
-          <div class="video-info">
-            <h3>🧪 pestisida organik ramah lingkungan</h3>
-            <p>
-              Pengendalian keriting daun cabai dengan pestisida organik dari kunyit
-            </p>
-          </div>
-        </div>
-
-        <!-- ================= SUMBER ================= -->
-        <section id="sumber" class="section">
-
-          <h2>Sumber Referensi</h2>
-
-          <div class="reference-grid">
-
-            <div class="reference-card">
-              <h3>Kementerian Pertanian RI</h3>
-              <p>
-                <a href="https://www.pertanian.go.id" target="_blank" rel="noopener noreferrer">
-                  www.pertanian.go.id
-                </a>
-              </p>
-            </div>
-
-            <div class="reference-card">
-              <h3>Balai Besar Penelitian Tanaman Padi</h3>
-              <p>
-                <a href="https://bbpadi.pertanian.go.id" target="_blank" rel="noopener noreferrer">
-                  bbpadi.pertanian.go.id
-                </a>
-              </p>
-            </div>
-
-            <div class="reference-card">
-              <h3>FAO</h3>
-              <p>
-                <a href="https://www.fao.org" target="_blank" rel="noopener noreferrer">
-                  www.fao.org
-                </a>
-              </p>
-            </div>
-
-            <div class="reference-card">
-              <h3>IRRI</h3>
-              <p>
-                <a href="https://www.irri.org" target="_blank" rel="noopener noreferrer">
-                  www.irri.org
-                </a>
-              </p>
-            </div>
-
-          </div>
-
-        </section>
-
-        <footer class="footer">
-
-          <div class="footer-container">
-
-            <!-- Brand -->
-            <div class="footer-brand">
-              <h2>TaniCerdas</h2>
-              <p>Platform Digital Budidaya Padi Modern berbasis teknologi dan informasi pertanian berkelanjutan.</p>
-            </div>
-
-            <!-- Divider -->
-            <div class="footer-divider"></div>
-
-            <!-- Credit -->
-            <div class="footer-credit">
-              <h3>Dikembangkan Oleh</h3>
-              <h2 class="name">Aisyah Nuraini Nugrahaning Dwi</h2>
-
-              <p>
-                Mahasiswa Program Studi <br>
-                <strong>Penyuluhan Pertanian Berkelanjutan</strong>
-              </p>
-
-              <p>
-                Politeknik Pembangunan Pertanian<br>
-                Yogyakarta–Magelang
-              </p>
-            </div>
-
-          </div>
-
-          <div class="footer-bottom">
-            <p>© 2026 TaniCerdas — All Rights Reserved</p>
-          </div>
-
-        </footer>
-        <script>
-          function hitungKebutuhan() {
-
-            const luas = parseFloat(document.getElementById("luasLahan").value);
-            const hasil = document.getElementById("hasilKalkulator");
-
-            if (isNaN(luas) || luas <= 0) {
-              hasil.innerHTML = "⚠️ Masukkan luas lahan yang valid!";
-              return;
-            }
-
-            // ================= CABAI ONLY =================
-
-            // standar rata-rata budidaya cabai per hektar
-            const benih = luas * 0.4; // kg/ha
-            const organik = luas * 15000; // kg/ha (15 ton)
-            const npk = luas * 250; // kg/ha
-            const urea = luas * 100; // kg/ha
-            const kcl = luas * 100; // kg/ha
-
-            hasil.innerHTML = `
-    🌶️ <b>Hasil Kebutuhan Cabai (${luas} Ha)</b><br><br>
-
-    🌱 Benih: <b>${benih.toFixed(2)} kg</b><br>
-    🌿 Pupuk Organik: <b>${(organik/1000).toFixed(2)} ton</b><br>
-    🧪 NPK: <b>${npk.toFixed(1)} kg</b><br>
-    🧪 Urea: <b>${urea.toFixed(1)} kg</b><br>
-    ⚡ KCl: <b>${kcl.toFixed(1)} kg</b><br><br>
-
-    📌 <i>Estimasi ini untuk budidaya cabai intensif skala lapang.</i>
-  `;
-          }
-        </script>
-        <script>
-          function openAI() {
-            document.getElementById("aiModal").style.display = "flex";
-          }
-
-          function closeAI() {
-            document.getElementById("aiModal").style.display = "none";
-          }
-
-          function sendQuestion() {
-            const input = document.getElementById("userQuestion");
-            const chat = document.getElementById("chatMessages");
-
-            const text = input.value.trim();
-
-            if (text === "") return;
-
-            chat.innerHTML += `<div class="user-message">${text}</div>`;
-
-            let response = getAIResponseCabai(text.toLowerCase());
-
-            setTimeout(() => {
-              chat.innerHTML += `<div class="bot-message">${response}</div>`;
-              chat.scrollTop = chat.scrollHeight;
-            }, 500);
-
-            input.value = "";
-          }
-
-          // ===== AI CABAI =====
-          function getAIResponseCabai(q) {
-
-            if (q.includes("thrips")) {
-              return "🐛 Thrips dapat dikendalikan dengan insektisida nabati atau musuh alami seperti predator Orius.";
-            }
-
-            if (q.includes("kutu")) {
-              return "🐞 Kutu daun dapat menyebabkan daun keriting. Gunakan PHT atau pestisida selektif.";
-            }
-
-            if (q.includes("pupuk")) {
-              return "🌱 Cabai membutuhkan NPK tinggi + KCl untuk pembentukan buah maksimal.";
-            }
-
-            if (q.includes("panen")) {
-              return "🌶️ Panen cabai dilakukan saat buah merah 60–80% untuk hasil optimal.";
-            }
-
-            if (q.includes("busuk")) {
-              return "🦠 Busuk buah biasanya akibat jamur antraknosa. Hindari kelembaban tinggi.";
-            }
-
-            return "🤖 Tanyakan tentang pupuk, thrips, kutu daun, penyakit, atau panen cabai.";
-          }
-
-          // ENTER
-          document.addEventListener("keydown", function(e) {
-            if (e.key === "Enter") {
-              sendQuestion();
-            }
-          });
-        </script>
-        <script>
-          function toggleMenu() {
-            const menu = document.getElementById("navMenu");
-            menu.classList.toggle("active");
-          }
-        </script>
+  <div id="footer"></div>
+  <script src="./include.js"></script>
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
