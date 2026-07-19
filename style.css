@@ -1903,27 +1903,34 @@ TABLE
 }
 
 /* =====================================================
-   HARGA PASAR KOMODITAS PADI
+   MARKET PRICE DASHBOARD PADI & CABE
 ===================================================== */
+
 
 .market-section {
 
     background: linear-gradient(180deg,
-            #f8fff8,
-            #edf8ed);
+            #f8fff8 0%,
+            #eef8ee 100%);
 
     padding: 90px 0;
 
 }
 
 
+
 /* ================= HEADER ================= */
+
 
 .market-badge {
 
-    display: inline-block;
+    display: inline-flex;
 
-    background: #e8f5e9;
+    align-items: center;
+
+    gap: 8px;
+
+    background: #dff3df;
 
     color: #2e7d32;
 
@@ -1935,7 +1942,7 @@ TABLE
 
     font-weight: 700;
 
-    margin-bottom: 15px;
+    letter-spacing: .3px;
 
 }
 
@@ -1943,13 +1950,13 @@ TABLE
 
 .market-title {
 
-    font-size: 40px;
+    margin-top: 18px;
+
+    font-size: 42px;
 
     font-weight: 800;
 
-    color: #2e7d32;
-
-    margin-bottom: 15px;
+    color: #1b5e20;
 
 }
 
@@ -1959,35 +1966,42 @@ TABLE
 
     max-width: 650px;
 
-    margin: auto;
+    margin: 15px auto 0;
 
     color: #666;
 
-    font-size: 16px;
-
     line-height: 1.7;
+
+    font-size: 16px;
 
 }
 
 
 
-/* ================= GRAFIK ================= */
+
+
+/* =====================================================
+   CHART CARD
+===================================================== */
 
 
 .chart-box {
 
-    background: #ffffff;
+    background: white;
 
     border-radius: 25px;
 
-    padding: 25px;
+    padding: 28px;
 
-    height: 450px;
+    height: 470px;
 
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, .08);
+
+        0 15px 40px rgba(0, 0, 0, .08);
 
     transition: .3s;
+
+    border: 1px solid rgba(46, 125, 50, .08);
 
 }
 
@@ -1995,12 +2009,14 @@ TABLE
 
 .chart-box:hover {
 
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 
     box-shadow:
-        0 15px 35px rgba(46, 125, 50, .15);
+
+        0 20px 45px rgba(46, 125, 50, .15);
 
 }
+
 
 
 
@@ -2012,7 +2028,7 @@ TABLE
 
     align-items: center;
 
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 
 }
 
@@ -2020,13 +2036,13 @@ TABLE
 
 .chart-header h4 {
 
-    margin: 0;
-
     color: #2e7d32;
 
-    font-size: 22px;
+    font-weight: 800;
 
-    font-weight: 700;
+    margin: 0;
+
+    font-size: 22px;
 
 }
 
@@ -2040,6 +2056,8 @@ TABLE
 
 
 
+
+
 .live-status {
 
     background: #e8f5e9;
@@ -2048,13 +2066,15 @@ TABLE
 
     padding: 8px 15px;
 
-    border-radius: 20px;
+    border-radius: 30px;
 
     font-size: 13px;
 
-    font-weight: 600;
+    font-weight: 700;
 
 }
+
+
 
 
 
@@ -2062,13 +2082,14 @@ TABLE
 
     position: relative;
 
-    height: 330px;
+    height: 340px;
 
 }
 
 
 
-#priceChart {
+#priceChart,
+#cabaiChart {
 
     width: 100% !important;
 
@@ -2080,7 +2101,9 @@ TABLE
 
 
 
-/* ================= CARD HARGA ================= */
+/* =====================================================
+   PRICE CARD
+===================================================== */
 
 
 .price-wrapper {
@@ -2089,9 +2112,11 @@ TABLE
 
     flex-direction: column;
 
-    gap: 20px;
+    gap: 18px;
 
 }
+
+
 
 
 
@@ -2099,7 +2124,7 @@ TABLE
 
     background: #fff;
 
-    border-radius: 20px;
+    border-radius: 22px;
 
     padding: 20px;
 
@@ -2109,9 +2134,13 @@ TABLE
 
     gap: 18px;
 
-    transition: .3s;
-
     border: 1px solid rgba(46, 125, 50, .08);
+
+    box-shadow:
+
+        0 8px 25px rgba(0, 0, 0, .06);
+
+    transition: .35s;
 
 }
 
@@ -2119,20 +2148,25 @@ TABLE
 
 .price-box:hover {
 
-    transform: translateY(-6px);
+    transform: translateY(-7px);
 
     box-shadow:
-        0 12px 25px rgba(46, 125, 50, .15);
+
+        0 15px 35px rgba(46, 125, 50, .15);
 
 }
 
 
 
+
+
+/* ICON */
+
 .icon-box {
 
-    width: 65px;
+    width: 70px;
 
-    height: 65px;
+    height: 70px;
 
     flex-shrink: 0;
 
@@ -2142,13 +2176,19 @@ TABLE
 
     justify-content: center;
 
-    background: #e8f5e9;
+    background:
+
+        linear-gradient(135deg,
+            #e8f5e9,
+            #c8e6c9);
 
     border-radius: 50%;
 
-    font-size: 32px;
+    font-size: 34px;
 
 }
+
+
 
 
 
@@ -2160,13 +2200,15 @@ TABLE
 
     font-size: 14px;
 
+    font-weight: 500;
+
 }
 
 
 
 .price-box h3 {
 
-    margin: 5px 0;
+    margin: 6px 0;
 
     color: #2e7d32;
 
@@ -2182,10 +2224,15 @@ TABLE
 
     font-size: 14px;
 
-    font-weight: 600;
+    color: #777;
 
 }
 
+
+
+
+
+/* STATUS */
 
 
 .up {
@@ -2224,28 +2271,30 @@ TABLE
 
 
 
+
+
 /* =====================================================
-   RESPONSIVE
+   RESPONSIVE LAPTOP
 ===================================================== */
 
-
-/* Laptop */
 
 @media(max-width:1200px) {
 
 
     .market-title {
 
-        font-size: 35px;
+        font-size: 36px;
 
     }
+
 
 
     .chart-box {
 
-        height: 420px;
+        height: 430px;
 
     }
+
 
 
     .chart-area {
@@ -2255,11 +2304,17 @@ TABLE
     }
 
 
+
 }
 
 
 
-/* Tablet */
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
 
 @media(max-width:992px) {
 
@@ -2271,6 +2326,7 @@ TABLE
     }
 
 
+
     .market-title {
 
         font-size: 32px;
@@ -2278,11 +2334,13 @@ TABLE
     }
 
 
+
     .chart-box {
 
-        height: 400px;
+        height: 420px;
 
     }
+
 
 
     .price-wrapper {
@@ -2292,13 +2350,17 @@ TABLE
     }
 
 
+
 }
 
 
 
 
 
-/* Mobile */
+/* =====================================================
+   MOBILE
+===================================================== */
+
 
 @media(max-width:768px) {
 
@@ -2308,6 +2370,7 @@ TABLE
         font-size: 28px;
 
     }
+
 
 
     .market-desc {
@@ -2320,13 +2383,26 @@ TABLE
 
 
 
+
+
     .chart-box {
 
         padding: 18px;
 
-        height: 360px;
+        height: 370px;
 
         border-radius: 18px;
+
+    }
+
+
+
+
+    .chart-header {
+
+        gap: 10px;
+
+        margin-bottom: 15px;
 
     }
 
@@ -2344,9 +2420,10 @@ TABLE
 
         padding: 6px 12px;
 
-        font-size: 12px;
+        font-size: 11px;
 
     }
+
 
 
 
@@ -2358,11 +2435,13 @@ TABLE
 
 
 
+
+
     .price-box {
 
         padding: 16px;
 
-        border-radius: 16px;
+        border-radius: 18px;
 
     }
 
@@ -2374,9 +2453,10 @@ TABLE
 
         height: 55px;
 
-        font-size: 26px;
+        font-size: 27px;
 
     }
+
 
 
 
@@ -2387,13 +2467,14 @@ TABLE
     }
 
 
+
 }
 
 
+/* =====================================================
+   HP KECIL
+===================================================== */
 
-
-
-/* HP kecil */
 
 @media(max-width:480px) {
 
@@ -2404,23 +2485,27 @@ TABLE
 
     }
 
-
-
     .market-title {
 
         font-size: 24px;
 
     }
 
+    .market-badge {
 
+        font-size: 12px;
 
-    .chart-box {
-
-        height: 320px;
+        padding: 7px 15px;
 
     }
 
+    .chart-box {
 
+        height: 330px;
+
+        padding: 15px;
+
+    }
 
     .chart-area {
 
@@ -2428,40 +2513,27 @@ TABLE
 
     }
 
-
-
     .chart-header {
+
+        flex-direction: column;
 
         align-items: flex-start;
 
-        gap: 10px;
-
     }
-
-
 
     .price-box {
-
         gap: 12px;
-
     }
-
-
 
     .price-box p {
-
-        font-size: 13px;
-
+        font-size: 12px;
     }
-
-
 
     .price-box h3 {
 
-        font-size: 19px;
+        font-size: 18px;
 
     }
-
 
 }
 
@@ -2494,183 +2566,118 @@ VIDEO
 /*==========================
 REFERENCE
 ===========================*/
-
-/* =====================================================
-   SUMBER REFERENSI - BOOTSTRAP STYLE
-===================================================== */
-
-#sumber {
-    background: linear-gradient(180deg,
-            #f6fbf4,
-            #ffffff);
-}
+/* ===============================
+   REFERENCE CARD
+================================ */
 
 
-/* Judul Section */
-#sumber h2 {
-    color: #2e7d32;
-    font-size: 40px;
-    font-weight: 800;
-    margin-bottom: 15px;
-}
+.reference-link {
 
+    text-decoration: none;
 
-#sumber p {
-    font-size: 16px;
+    color: inherit;
+
 }
 
 
 
-/* Card Referensi */
 .reference-card {
-    border-radius: 20px !important;
+
+    border-radius: 25px;
+
+    transition: .4s;
+
     overflow: hidden;
-    background: rgba(255, 255, 255, .9);
 
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease;
-
-    position: relative;
-}
-
-
-
-/* Efek garis hijau atas */
-.reference-card::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 5px;
-
-    background: linear-gradient(90deg,
-            #2e7d32,
-            #81c784);
+    background: white;
 
 }
 
 
 
-/* Hover Card */
 .reference-card:hover {
 
-    transform: translateY(-12px);
+    transform: translateY(-10px);
 
     box-shadow:
-        0 20px 40px rgba(46, 125, 50, .18) !important;
+        0 20px 40px rgba(46, 125, 50, .2) !important;
 
 }
 
 
 
-/* Icon Emoji */
-.reference-card .fs-1 {
+.reference-icon {
 
-    width: 75px;
-    height: 75px;
+    width: 80px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 80px;
 
     margin: auto;
 
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 40px;
+
+    background: #e8f5e9;
+
     border-radius: 50%;
 
-    background:
-        rgba(46, 125, 50, .1);
+    margin-bottom: 20px;
 
 }
 
 
 
-/* Judul Card */
-.reference-card .card-title {
+.reference-card h5 {
 
     color: #2e7d32;
 
-    font-size: 20px;
-
-    min-height: 55px;
+    min-height: 50px;
 
 }
 
 
 
-/* Deskripsi */
-.reference-card .card-text {
+.reference-card p {
 
-    color: #666;
+    min-height: 70px;
 
     line-height: 1.6;
 
-    min-height: 65px;
-
 }
 
 
 
-/* Tombol */
-.reference-card .btn-success {
-
-    background:
-        linear-gradient(135deg,
-            #2e7d32,
-            #43a047);
-
-    color: #ffffff !important;
-
-    border: none;
+.reference-card .btn {
 
     border-radius: 50px;
 
-    padding: 10px 22px;
-
-    font-weight: 600;
-
-    transition: .3s;
-
-}
-
-
-.reference-card .btn-success:hover {
-
-    background:
-        linear-gradient(135deg,
-            #1b5e20,
-            #2e7d32);
-
-    color: #ffffff !important;
-
-    transform: scale(1.05);
+    padding: 8px 20px;
 
 }
 
 
 
-/* Responsive Mobile */
-@media(max-width:768px) {
 
 
-    #sumber h2 {
-
-        font-size: 32px;
-
-    }
-
+@media(max-width:576px) {
 
     .reference-card {
 
-        margin-bottom: 20px;
+        margin: 0 10px;
 
     }
 
+
+    .reference-card p {
+
+        min-height: auto;
+
+    }
 
 }
 
@@ -3842,206 +3849,869 @@ RESPONSIVE
 
 }
 
-/* =====================================================
-   JURNAL & ARTIKEL
-===================================================== */
-.journal-area {
-    margin-top: 5%;
-    background: #f8faf8;
-}
+
+/* ===============================
+ JOURNAL SECTION
+================================ */
 
 
-.journal-paper {
+.journal-section {
 
-    background: white;
+    padding: 90px 0;
 
-    border-radius: 20px;
+    background:
+        linear-gradient(180deg,
+            #f5fff5,
+            #ffffff);
 
-    padding: 50px;
-
-    box-shadow:
-        0 15px 40px rgba(0, 0, 0, .08);
+    overflow: hidden;
 
 }
 
 
 
-.paper-cover {
-
-    background: #eee;
-
-    padding: 20px;
-
-    border-radius: 10px;
-
-}
 
 
-
-.paper-cover img {
-
-    width: 100%;
-
-    max-width: 300px;
-
-    height: 380px;
-
-    object-fit: cover;
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, .2);
-
-}
+/* ===============================
+   TITLE
+================================ */
 
 
+.journal-title span {
 
-.paper-content {
+    display: inline-block;
 
-    padding: 20px;
-
-}
-
-
-
-.journal-index {
-
-    background: #198754;
-
-    color: white;
-
-    padding: 8px 18px;
-
-    border-radius: 30px;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-}
-
-
-
-.cabai-label {
-
-    background: #dc3545;
-
-}
-
-
-
-.paper-content h2 {
-
-    margin-top: 25px;
-
-    font-size: 30px;
-
-    font-weight: 700;
-
-    color: #222;
-
-}
-
-
-
-.paper-content p {
+    color: #2e7d32;
 
     font-size: 16px;
 
-    line-height: 1.8;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.journal-title h1 {
+
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    color: #1b5e20;
+
+    margin-bottom: 15px;
+
+
+}
+
+
+
+.journal-title p {
+
+
+    max-width: 700px;
+
+    margin: auto;
 
     color: #666;
 
-}
+    font-size: 17px;
 
-
-
-.metadata {
-
-    border-top: 1px solid #ddd;
-
-    margin-top: 25px;
-
-    padding-top: 20px;
+    line-height: 1.7;
 
 }
 
 
 
-.metadata i {
-
-    color: #198754;
-
-    margin-right: 10px;
-
-}
 
 
+/* =====================================================
+   JOURNAL CARD
+===================================================== */
 
-.btn-journal {
 
-    display: inline-flex;
+.journal-card {
 
-    gap: 10px;
 
-    align-items: center;
+    background: white;
 
-    background: #198754;
-
-    color: white;
-
-    padding: 12px 25px;
 
     border-radius: 30px;
 
-    text-decoration: none;
 
-    margin-top: 20px;
+    padding: 50px;
+
+
+    margin: 20px 40px;
+
+
+    box-shadow:
+
+
+        0 15px 45px rgba(0, 0, 0, .08);
+
+
+    position: relative;
+
+
+    transition: .4s;
+
 
 }
 
 
 
-.journal-arrow {
+.journal-card:hover {
 
-    background: #198754;
 
-    width: 45px;
+    transform: translateY(-5px);
 
-    height: 45px;
 
-    border-radius: 50%;
+    box-shadow:
+
+
+        0 25px 60px rgba(46, 125, 50, .15);
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   IMAGE COVER
+===================================================== */
+
+
+.journal-image {
+
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+
+}
+
+
+
+.journal-image img {
+
+
+    width: 100%;
+
+
+    height: 420px;
+
+
+    object-fit: cover;
+
+
+    transition: .5s;
+
+
+}
+
+
+
+.journal-image:hover img {
+
+
+    transform: scale(1.08);
+
+
+}
+
+
+
+
+
+/* Label Padi Cabai */
+
+
+.journal-image span {
+
+
+    position: absolute;
+
+
+    left: 20px;
+
+    bottom: 20px;
+
+
+    background: #2e7d32;
+
+
+    color: white;
+
+
+    padding: 8px 25px;
+
+
+    border-radius: 50px;
+
+
+    font-size: 14px;
+
+
+    font-weight: 700;
+
+
+    letter-spacing: 1px;
+
+
+    box-shadow:
+
+        0 5px 15px rgba(0, 0, 0, .2);
+
+
+}
+
+
+
+
+
+.journal-image.cabai span {
+
+
+    background: #43a047;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+
+.journal-content small {
+
+
+    color: #43a047;
+
+
+    font-weight: 700;
+
+
+    letter-spacing: 1px;
+
+
+}
+
+
+
+.journal-content h2 {
+
+
+    margin: 20px 0;
+
+
+    color: #1b5e20;
+
+
+    font-size: 30px;
+
+
+    line-height: 1.4;
+
+
+    font-weight: 800;
+
+
+}
+
+
+
+.journal-content p {
+
+
+    color: #666;
+
+
+    font-size: 16px;
+
+
+    line-height: 1.8;
+
+
+    margin-bottom: 25px;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   JOURNAL INFORMATION
+===================================================== */
+
+
+.journal-info {
+
+
+    padding: 20px 0;
+
+
+    border-top: 1px solid #eee;
+
+
+    border-bottom: 1px solid #eee;
+
+
+}
+
+
+
+.journal-info div {
+
 
     display: flex;
 
+
     align-items: center;
 
-    justify-content: center;
+
+    gap: 12px;
+
+
+    margin: 12px 0;
+
+
+    color: #555;
+
+
+    font-size: 15px;
+
 
 }
 
 
 
-@media(max-width:768px) {
+.journal-info i {
 
-    .journal-paper {
 
-        padding: 25px;
+    width: 25px;
+
+
+    color: #2e7d32;
+
+
+    font-size: 18px;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   BUTTON DOWNLOAD
+===================================================== */
+
+
+.journal-button {
+
+
+    display: inline-flex;
+
+
+    align-items: center;
+
+
+    gap: 12px;
+
+
+    margin-top: 25px;
+
+
+    padding: 14px 32px;
+
+
+    border-radius: 50px;
+
+
+    background: #2e7d32;
+
+
+    color: white;
+
+
+    font-weight: 600;
+
+
+    text-decoration: none;
+
+
+    transition: .3s;
+
+
+    box-shadow:
+
+
+        0 10px 25px rgba(46, 125, 50, .25);
+
+
+}
+
+
+
+.journal-button:hover {
+
+
+    background: #1b5e20;
+
+
+    color: white;
+
+
+    transform: translateY(-4px);
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   CAROUSEL BUTTON MODERN
+===================================================== */
+
+
+/* posisi tombol */
+
+.carousel-control-prev,
+.carousel-control-next {
+
+
+    width: 60px;
+
+
+    opacity: 1;
+
+
+}
+
+
+
+/* keluar dari card */
+
+.carousel-control-prev {
+
+
+    left: -20px;
+
+
+}
+
+
+.carousel-control-next {
+
+
+    right: -20px;
+
+
+}
+
+
+
+
+
+/* icon panah */
+
+.journal-arrow {
+
+
+    width: 55px;
+
+
+    height: 55px;
+
+
+    border-radius: 50%;
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    justify-content: center;
+
+
+
+    background:
+
+
+        rgba(46, 125, 50, .15);
+
+
+
+    backdrop-filter: blur(12px);
+
+
+
+    border:
+
+
+        1px solid rgba(46, 125, 50, .25);
+
+
+
+    color: #2e7d32;
+
+
+
+    font-size: 20px;
+
+
+
+    transition: .35s;
+
+
+
+}
+
+
+
+
+
+
+
+/* hover arrow */
+
+
+.carousel-control-prev:hover .journal-arrow,
+.carousel-control-next:hover .journal-arrow {
+
+
+    background: #2e7d32;
+
+
+    color: white;
+
+
+    transform: scale(1.15);
+
+
+    box-shadow:
+
+
+        0 10px 25px rgba(46, 125, 50, .35);
+
+
+}
+
+
+
+
+
+
+/* hilangkan icon default bootstrap */
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+
+
+    display: none;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+
+.carousel-item {
+
+
+    transition:
+
+        transform .7s ease,
+
+        opacity .5s ease;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+
+@media(max-width:992px) {
+
+
+    .journal-section {
+
+
+        padding: 70px 0;
+
 
     }
 
 
-    .paper-content h2 {
 
-        font-size: 22px;
+    .journal-card {
+
+
+        padding: 35px;
+
+
+        margin: 20px;
+
 
     }
 
 
-    .paper-cover img {
 
-        height: 320px;
+    .journal-image img {
+
+
+        height: 350px;
+
 
     }
+
+
+
+    .journal-content h2 {
+
+
+        font-size: 25px;
+
+
+    }
+
+
+
+    .carousel-control-prev {
+
+
+        left: 5px;
+
+
+    }
+
+
+
+    .carousel-control-next {
+
+
+        right: 5px;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+
+@media(max-width:576px) {
+
+
+
+    .journal-section {
+
+
+        padding: 50px 0;
+
+
+    }
+
+
+
+
+    .journal-title h1 {
+
+
+        font-size: 30px;
+
+
+    }
+
+
+
+    .journal-title p {
+
+
+        font-size: 14px;
+
+
+    }
+
+
+
+
+    .journal-card {
+
+
+        padding: 20px;
+
+
+        border-radius: 20px;
+
+
+        margin: 10px;
+
+
+    }
+
+
+
+
+    .journal-image img {
+
+
+        height: 260px;
+
+
+    }
+
+
+
+
+    .journal-content {
+
+
+        margin-top: 25px;
+
+
+    }
+
+
+
+
+    .journal-content h2 {
+
+
+        font-size: 21px;
+
+
+    }
+
+
+
+
+    .journal-content p {
+
+
+        font-size: 14px;
+
+
+    }
+
+
+
+
+    .journal-info div {
+
+
+        font-size: 13px;
+
+
+    }
+
+
+
+
+    .journal-button {
+
+
+        width: 100%;
+
+
+        justify-content: center;
+
+
+        padding: 13px;
+
+
+    }
+
+
+
+
+    .carousel-control-prev,
+    .carousel-control-next {
+
+
+        width: 40px;
+
+
+    }
+
+
+
+    .journal-arrow {
+
+
+        width: 38px;
+
+
+        height: 38px;
+
+
+        font-size: 14px;
+
+
+    }
+
+
 
 }
 
@@ -4049,223 +4719,436 @@ RESPONSIVE
    SECTION PEMUPUKAN
 ========================================== */
 
+/* ================= PEMUPUKAN TIMELINE ================= */
+
+
 #pemupukan {
-    padding: 80px 0;
-    background: linear-gradient(180deg, #f8fff8, #eef8ee);
+
+    background:
+        linear-gradient(180deg,
+            #f8fff8,
+            #ffffff);
+
 }
 
-/* Judul */
 
-#pemupukan h2 {
-    color: #2e7d32;
-    font-weight: 800;
-    font-size: 2.2rem;
-    margin-bottom: 10px;
+
+/* Timeline */
+
+.fertilizer-timeline {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+
 }
 
-#pemupukan p {
-    color: #666;
-    max-width: 700px;
-    margin: auto;
-    font-size: 16px;
-    line-height: 1.7;
-}
+
 
 /* Card */
 
-.fertilizer-card {
-    max-width: 850px;
-    margin: 40px auto 0;
-    border: none;
-    border-radius: 18px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
-    transition: .35s;
-}
+.fertilizer-box {
 
-.fertilizer-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(46, 125, 50, .15);
-}
 
-/* Table */
+    display: flex;
 
-.fertilizer-table {
-    margin: 0;
-}
+    gap: 20px;
 
-.fertilizer-table thead th {
+    background: white;
 
-    background: linear-gradient(135deg, #2e7d32, #43a047);
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-    font-size: 16px;
-    font-weight: 700;
-    border: none;
+    padding: 30px;
 
-}
 
-.fertilizer-table tbody td {
+    border-radius: 25px;
 
-    text-align: center;
-    vertical-align: middle;
-    padding: 16px;
-    font-size: 15px;
-    border-bottom: 1px solid #ececec;
 
-}
+    box-shadow:
 
-.fertilizer-table tbody tr {
+        0 10px 30px rgba(0, 0, 0, .08);
+
+
     transition: .3s;
+
+
+    border-left: 6px solid #2e7d32;
+
+
 }
 
-.fertilizer-table tbody tr:hover {
-    background: #f6fff6;
+
+
+.fertilizer-box:hover {
+
+
+    transform: translateY(-8px);
+
+
+    box-shadow:
+
+        0 15px 40px rgba(46, 125, 50, .18);
+
+
 }
 
-/* Badge */
 
-.fertilizer-table .badge {
 
-    padding: 8px 14px;
-    font-size: 13px;
-    border-radius: 30px;
+
+
+/* Icon */
+
+
+.fertilizer-icon {
+
+
+    width: 70px;
+
+    height: 70px;
+
+
+    min-width: 70px;
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    font-size: 35px;
+
+
+    background: #e8f5e9;
+
+
+    border-radius: 50%;
+
+
+}
+
+
+
+
+
+/* Content */
+
+
+.fertilizer-content h4 {
+
+
+    color: #2e7d32;
+
+
+    font-weight: 800;
+
+
+    margin: 12px 0;
+
+
+}
+
+
+
+
+
+.fertilizer-content p {
+
+
+    color: #666;
+
+
+    line-height: 1.6;
+
+
+    margin-bottom: 15px;
+
+
+}
+
+
+
+
+/* Umur */
+
+
+.fertilizer-age {
+
+
+    background: #2e7d32;
+
+
+    color: white;
+
+
+    padding: 7px 15px;
+
+
+    border-radius: 50px;
+
+
+    font-size: 14px;
+
+
     font-weight: 600;
 
-}
-
-/* Strong */
-
-.fertilizer-table strong {
-    color: #2e7d32;
-    font-size: 15px;
-}
-
-/* Zebra */
-
-.fertilizer-table tbody tr:nth-child(even) {
-    background: #fcfffc;
-}
-
-/* ==========================================
-   RESPONSIVE
-========================================== */
-
-/* Laptop */
-
-@media (max-width:992px) {
-
-    #pemupukan {
-        padding: 70px 20px;
-    }
-
-    .fertilizer-card {
-        max-width: 100%;
-    }
-
-    #pemupukan h2 {
-        font-size: 2rem;
-    }
 
 }
 
-/* Tablet */
 
-@media (max-width:768px) {
 
-    #pemupukan {
-        padding: 60px 15px;
+
+/* Dosis */
+
+
+.dose {
+
+
+    background: #f1f8e9;
+
+
+    padding: 12px 15px;
+
+
+    border-radius: 12px;
+
+
+    color: #555;
+
+
+}
+
+
+
+.dose strong {
+
+
+    color: #1b5e20;
+
+
+}
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:768px) {
+
+
+    .fertilizer-timeline {
+
+
+        grid-template-columns: 1fr;
+
+
     }
 
-    #pemupukan h2 {
-        font-size: 1.8rem;
+
+
+    .fertilizer-box {
+
+
+        padding: 20px;
+
+
     }
 
-    #pemupukan p {
-        font-size: 15px;
+
+
+    .fertilizer-icon {
+
+
+        width: 55px;
+
+        height: 55px;
+
+        min-width: 55px;
+
+
+        font-size: 28px;
+
+
     }
 
-    .fertilizer-table thead th {
-        padding: 12px;
+
+
+    .fertilizer-content h4 {
+
+
+        font-size: 18px;
+
+
+    }
+
+
+
+    .fertilizer-content p {
+
+
         font-size: 14px;
+
+
     }
 
-    .fertilizer-table tbody td {
-        padding: 12px;
-        font-size: 14px;
-    }
 
-    .fertilizer-table .badge {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
 
 }
 
-/* Mobile */
+/* =====================================================
+   PEMUPUKAN CABE
+===================================================== */
 
-@media (max-width:576px) {
 
-    #pemupukan {
-        padding: 50px 10px;
-    }
+#pemupukan-cabe {
 
-    #pemupukan h2 {
-        font-size: 1.5rem;
-    }
+    background:
 
-    #pemupukan p {
-        font-size: 14px;
-    }
-
-    .fertilizer-card {
-        border-radius: 14px;
-        margin-top: 25px;
-    }
-
-    .table-responsive {
-        border-radius: 14px;
-    }
-
-    .fertilizer-table {
-        min-width: 500px;
-    }
-
-    .fertilizer-table thead th {
-        font-size: 13px;
-        padding: 10px;
-        white-space: nowrap;
-    }
-
-    .fertilizer-table tbody td {
-        font-size: 13px;
-        padding: 10px;
-        white-space: nowrap;
-    }
-
-    .fertilizer-table .badge {
-        font-size: 11px;
-        padding: 5px 8px;
-    }
-
-    .fertilizer-table strong {
-        font-size: 13px;
-    }
+        linear-gradient(180deg,
+            #fff8f5,
+            #ffffff);
 
 }
 
-/* Extra Small */
 
-@media (max-width:360px) {
 
-    #pemupukan h2 {
-        font-size: 1.3rem;
+
+/* Warna cabe */
+
+#pemupukan-cabe .section-subtitle {
+
+
+    background: #ffebee;
+
+    color: #d84315;
+
+
+}
+
+
+
+#pemupukan-cabe .section-title {
+
+
+    color: #d84315;
+
+
+}
+
+
+
+
+/* Card cabe */
+
+
+.cabe-card {
+
+
+    border-left:
+
+        6px solid #e53935;
+
+
+}
+
+
+
+
+.cabe-card:hover {
+
+
+    box-shadow:
+
+        0 15px 40px rgba(229, 57, 53, .18);
+
+
+}
+
+
+
+
+
+/* Icon cabe */
+
+
+.cabe-card .fertilizer-icon {
+
+
+    background: #ffebee;
+
+
+}
+
+
+
+
+
+/* Umur cabe */
+
+
+.cabe-card .fertilizer-age {
+
+
+    background: #e53935;
+
+
+}
+
+
+
+
+
+/* Dosis cabe */
+
+
+.cabe-card .dose {
+
+
+    background: #fff3e0;
+
+
+}
+
+
+
+.cabe-card .dose strong {
+
+
+    color: #d84315;
+
+
+}
+
+
+
+
+/* Responsive */
+
+
+@media(max-width:768px) {
+
+
+    #pemupukan-cabe .section-title {
+
+
+        font-size: 28px;
+
+
     }
 
-    #pemupukan p {
-        font-size: 13px;
+
+
+    .cabe-card {
+
+
+        border-left-width: 4px;
+
+
     }
+
 
 }

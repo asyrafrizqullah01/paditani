@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /
+
+
+Sitemap:
+https://asyrafrizqullah01.github.io/paditani/sitemap.xml
