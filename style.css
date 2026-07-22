@@ -1898,24 +1898,36 @@ TABLE
     }
 }
 
+
 /* =====================================================
-   MARKET PRICE DASHBOARD PADI & CABE
+   MARKET UPDATE SECTION
 ===================================================== */
 
 
 .market-section {
 
-    background: linear-gradient(180deg,
-            #f8fff8 0%,
-            #eef8ee 100%);
+    padding: 80px 0;
 
-    padding: 90px 0;
+    background:
+        linear-gradient(180deg,
+            #f1f8e9,
+            #ffffff);
+
+    overflow: hidden;
 
 }
 
 
 
 /* ================= HEADER ================= */
+
+
+.market-header {
+
+    margin-bottom: 35px;
+
+}
+
 
 
 .market-badge {
@@ -1926,189 +1938,197 @@ TABLE
 
     gap: 8px;
 
-    background: #dff3df;
+    background: #2e7d32;
 
-    color: #2e7d32;
+    color: white;
 
-    padding: 8px 20px;
+    padding: 8px 18px;
 
     border-radius: 50px;
 
     font-size: 14px;
 
-    font-weight: 700;
+    font-weight: 600;
 
-    letter-spacing: .3px;
+    margin-bottom: 15px;
 
 }
 
 
 
-.market-title {
-
-    margin-top: 18px;
-
-    font-size: 42px;
-
-    font-weight: 800;
+.market-header h2 {
 
     color: #1b5e20;
 
+    font-size: 38px;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+
 }
 
 
 
-.market-desc {
-
-    max-width: 650px;
-
-    margin: 15px auto 0;
+.market-header p {
 
     color: #666;
 
-    line-height: 1.7;
-
     font-size: 16px;
 
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
 }
+
+
 
 
 
 
 
 /* =====================================================
-   CHART CARD
+   CATEGORY BUTTON
 ===================================================== */
 
 
-.chart-box {
+.market-category {
 
-    background: white;
-
-    border-radius: 25px;
-
-    padding: 28px;
-
-    height: 470px;
-
-    box-shadow:
-
-        0 15px 40px rgba(0, 0, 0, .08);
-
-    transition: .3s;
-
-    border: 1px solid rgba(46, 125, 50, .08);
-
-}
-
-
-
-.chart-box:hover {
-
-    transform: translateY(-6px);
-
-    box-shadow:
-
-        0 20px 45px rgba(46, 125, 50, .15);
-
-}
-
-
-
-
-.chart-header {
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content: center;
 
-    align-items: center;
+    flex-wrap: wrap;
 
-    margin-bottom: 25px;
+    gap: 12px;
+
+    margin-bottom: 40px;
+
 
 }
 
 
 
-.chart-header h4 {
+.market-category button {
 
-    color: #2e7d32;
 
-    font-weight: 800;
+    border: none;
 
-    margin: 0;
+    outline: none;
 
-    font-size: 22px;
+    background: white;
+
+    color: #555;
+
+    padding: 10px 22px;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+
+        0 5px 15px rgba(0, 0, 0, .08);
+
+    transition: .3s ease;
+
 
 }
 
 
 
-.chart-header small {
+.market-category button:hover {
 
-    color: #777;
-
-}
-
-
-
-
-
-.live-status {
 
     background: #e8f5e9;
 
     color: #2e7d32;
 
-    padding: 8px 15px;
-
-    border-radius: 30px;
-
-    font-size: 13px;
-
-    font-weight: 700;
 
 }
 
 
 
+.market-category button.active {
 
 
-.chart-area {
+    background: #2e7d32;
 
-    position: relative;
+    color: white;
 
-    height: 340px;
 
 }
 
 
-
-#priceChart,
-#cabaiChart {
-
-    width: 100% !important;
-
-    height: 100% !important;
-
-}
 
 
 
 
 
 /* =====================================================
-   PRICE CARD
+   MARKET SLIDER
 ===================================================== */
 
 
-.price-wrapper {
+.market-slider {
+
 
     display: flex;
 
-    flex-direction: column;
+    gap: 25px;
 
-    gap: 18px;
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+
+    padding: 15px 10px 30px;
+
+    scroll-snap-type: x mandatory;
+
+    cursor: grab;
+
+
+}
+
+
+
+.market-slider:active {
+
+    cursor: grabbing;
+
+}
+
+
+
+.market-slider::-webkit-scrollbar {
+
+    height: 7px;
+
+}
+
+
+.market-slider::-webkit-scrollbar-track {
+
+    background: #e8f5e9;
+
+    border-radius: 20px;
+
+}
+
+
+.market-slider::-webkit-scrollbar-thumb {
+
+    background: #66bb6a;
+
+    border-radius: 20px;
 
 }
 
@@ -2116,41 +2136,91 @@ TABLE
 
 
 
-.price-box {
+/* ITEM */
 
-    background: #fff;
 
-    border-radius: 22px;
+.market-item {
 
-    padding: 20px;
+
+    flex:
+
+        0 0 310px;
+
+
+    scroll-snap-align: start;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   MARKET CARD
+===================================================== */
+
+
+.market-card {
+
+
+    height: 170px;
 
     display: flex;
 
     align-items: center;
 
-    gap: 18px;
+    gap: 22px;
 
-    border: 1px solid rgba(46, 125, 50, .08);
+    padding: 25px;
+
+
+    background:
+
+        rgba(255, 255, 255, .85);
+
+
+    border-radius: 25px;
+
+
+    border:
+
+        1px solid rgba(46, 125, 50, .12);
+
 
     box-shadow:
 
-        0 8px 25px rgba(0, 0, 0, .06);
 
-    transition: .35s;
+        0 15px 35px rgba(0, 0, 0, .08);
+
+
+    backdrop-filter: blur(10px);
+
+
+    transition: .35s ease;
+
 
 }
 
 
 
-.price-box:hover {
+.market-card:hover {
 
-    transform: translateY(-7px);
+
+    transform: translateY(-10px);
+
 
     box-shadow:
 
-        0 15px 35px rgba(46, 125, 50, .15);
+
+        0 20px 45px rgba(46, 125, 50, .18);
+
 
 }
+
+
 
 
 
@@ -2158,29 +2228,38 @@ TABLE
 
 /* ICON */
 
-.icon-box {
 
-    width: 70px;
+.market-icon {
 
-    height: 70px;
 
-    flex-shrink: 0;
+    width: 75px;
+
+    height: 75px;
+
+    min-width: 75px;
+
 
     display: flex;
 
-    align-items: center;
-
     justify-content: center;
 
-    background:
+    align-items: center;
 
-        linear-gradient(135deg,
-            #e8f5e9,
-            #c8e6c9);
+
+    font-size: 38px;
+
 
     border-radius: 50%;
 
-    font-size: 34px;
+
+    background:
+
+        linear-gradient(145deg,
+
+            #e8f5e9,
+
+            #c8e6c9);
+
 
 }
 
@@ -2188,39 +2267,76 @@ TABLE
 
 
 
-.price-box p {
+
+
+/* INFO */
+
+
+.market-info h4 {
+
+
+    margin: 0 0 8px;
+
+
+    font-size: 15px;
+
+
+    color: #555;
+
+
+    font-weight: 600;
+
+
+}
+
+
+
+.market-info h3 {
+
 
     margin: 0;
 
-    color: #777;
 
-    font-size: 14px;
-
-    font-weight: 500;
-
-}
+    font-size: 26px;
 
 
+    color: #1b5e20;
 
-.price-box h3 {
-
-    margin: 6px 0;
-
-    color: #2e7d32;
-
-    font-size: 25px;
 
     font-weight: 800;
 
+
 }
 
 
 
-.price-box h3 small {
+.market-info h3 span {
+
 
     font-size: 14px;
 
+
     color: #777;
+
+
+    font-weight: 500;
+
+
+}
+
+
+
+.market-info p {
+
+
+    margin-top: 8px;
+
+
+    font-size: 14px;
+
+
+    font-weight: 700;
+
 
 }
 
@@ -2231,77 +2347,96 @@ TABLE
 /* STATUS */
 
 
-.up {
+.naik {
 
     color: #16a34a;
 
-    font-size: 14px;
-
-    font-weight: 700;
-
 }
 
 
 
-.down {
+.turun {
 
     color: #dc2626;
 
-    font-size: 14px;
-
-    font-weight: 700;
-
 }
 
 
 
-.stable {
+.stabil {
 
-    color: #2563eb;
-
-    font-size: 14px;
-
-    font-weight: 700;
+    color: #d97706;
 
 }
+
+
 
 
 
 
 
 /* =====================================================
-   RESPONSIVE LAPTOP
+   PAGINATION DOT
 ===================================================== */
 
 
-@media(max-width:1200px) {
+.market-dots {
 
 
-    .market-title {
+    display: flex;
 
-        font-size: 36px;
+    justify-content: center;
 
-    }
+    align-items: center;
 
+    gap: 10px;
 
-
-    .chart-box {
-
-        height: 430px;
-
-    }
-
-
-
-    .chart-area {
-
-        height: 300px;
-
-    }
-
+    margin-top: 15px;
 
 
 }
+
+
+
+.market-dot {
+
+
+    width: 10px;
+
+    height: 10px;
+
+
+    background: #c8e6c9;
+
+
+    border-radius: 50%;
+
+
+    transition: .3s;
+
+
+    cursor: pointer;
+
+
+}
+
+
+
+.market-dot.active {
+
+
+    width: 30px;
+
+
+    border-radius: 20px;
+
+
+    background: #2e7d32;
+
+
+}
+
+
 
 
 
@@ -2317,13 +2452,13 @@ TABLE
 
     .market-section {
 
-        padding: 70px 0;
+        padding: 60px 0;
 
     }
 
 
 
-    .market-title {
+    .market-header h2 {
 
         font-size: 32px;
 
@@ -2331,23 +2466,25 @@ TABLE
 
 
 
-    .chart-box {
+    .market-item {
 
-        height: 420px;
-
-    }
-
-
-
-    .price-wrapper {
-
-        margin-top: 10px;
+        flex-basis: 290px;
 
     }
 
+
+
+    .market-card {
+
+        height: 160px;
+
+    }
 
 
 }
+
+
+
 
 
 
@@ -2358,178 +2495,111 @@ TABLE
 ===================================================== */
 
 
-@media(max-width:768px) {
+@media(max-width:576px) {
 
 
-    .market-title {
+    .market-header h2 {
 
-        font-size: 28px;
+
+        font-size: 26px;
+
 
     }
 
 
 
-    .market-desc {
+    .market-header p {
+
 
         font-size: 14px;
 
-        padding: 0 15px;
 
     }
 
 
 
+    .market-category button {
 
 
-    .chart-box {
+        padding: 8px 15px;
+
+        font-size: 13px;
+
+
+    }
+
+
+
+    .market-slider {
+
+
+        gap: 15px;
+
+    }
+
+
+
+    .market-item {
+
+
+        flex-basis: 260px;
+
+
+    }
+
+
+
+    .market-card {
+
+
+        height: 150px;
+
 
         padding: 18px;
 
-        height: 370px;
 
-        border-radius: 18px;
+        border-radius: 20px;
+
 
     }
 
 
 
+    .market-icon {
 
-    .chart-header {
 
-        gap: 10px;
+        width: 60px;
 
-        margin-bottom: 15px;
+        height: 60px;
+
+        min-width: 60px;
+
+
+        font-size: 30px;
+
 
     }
 
 
 
-    .chart-header h4 {
+    .market-info h3 {
 
-        font-size: 18px;
-
-    }
-
-
-
-    .live-status {
-
-        padding: 6px 12px;
-
-        font-size: 11px;
-
-    }
-
-
-
-
-    .chart-area {
-
-        height: 260px;
-
-    }
-
-
-
-
-
-    .price-box {
-
-        padding: 16px;
-
-        border-radius: 18px;
-
-    }
-
-
-
-    .icon-box {
-
-        width: 55px;
-
-        height: 55px;
-
-        font-size: 27px;
-
-    }
-
-
-
-
-    .price-box h3 {
 
         font-size: 21px;
 
-    }
-
-
-
-}
-
-
-/* =====================================================
-   HP KECIL
-===================================================== */
-
-
-@media(max-width:480px) {
-
-
-    .market-section {
-
-        padding: 50px 0;
 
     }
 
-    .market-title {
 
-        font-size: 24px;
 
-    }
+    .market-info h4 {
 
-    .market-badge {
 
-        font-size: 12px;
+        font-size: 13px;
 
-        padding: 7px 15px;
 
     }
 
-    .chart-box {
-
-        height: 330px;
-
-        padding: 15px;
-
-    }
-
-    .chart-area {
-
-        height: 220px;
-
-    }
-
-    .chart-header {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-    }
-
-    .price-box {
-        gap: 12px;
-    }
-
-    .price-box p {
-        font-size: 12px;
-    }
-
-    .price-box h3 {
-
-        font-size: 18px;
-
-    }
 
 }
 

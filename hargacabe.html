@@ -1,28 +1,33 @@
-<!-- ================= HARGA PASAR CABE ================= -->
+<!-- =====================================================
+     MARKET UPDATE HARGA CABAI
+===================================================== -->
 
-<section id="harga-cabe" class="py-5 market-section">
+
+<section id="hargacabe" class="market-section">
+
 
   <div class="container">
 
 
+
     <!-- HEADER -->
 
-    <div class="text-center mb-5">
+    <div class="market-header text-center">
 
 
       <span class="market-badge">
-        🌶️ Market Update
+        🌶️ Market Update Cabai
       </span>
 
 
-      <h2 class="market-title">
-        Harga Pasar Komoditas Cabe
+      <h2>
+        Harga Pasar Komoditas Cabai
       </h2>
 
 
-      <p class="market-desc">
-        Informasi simulasi harga cabai sebagai referensi petani
-        untuk menentukan waktu panen dan strategi pemasaran.
+      <p>
+        Informasi harga cabai, benih, pupuk,
+        dan sarana produksi hortikultura terbaru.
       </p>
 
 
@@ -32,61 +37,91 @@
 
 
 
-    <div class="row g-4 align-items-stretch">
+    <!-- CATEGORY -->
+
+
+    <div class="market-category">
+
+
+      <button class="active" data-category-cabe="all">
+        Semua
+      </button>
+
+
+      <button data-category-cabe="cabai">
+        🌶️ Cabai
+      </button>
+
+
+      <button data-category-cabe="benihcabe">
+        🌱 Benih
+      </button>
+
+
+      <button data-category-cabe="pupukcabe">
+        🧪 Pupuk
+      </button>
+
+
+      <button data-category-cabe="pestisida">
+        🐛 Pestisida
+      </button>
+
+
+      <button data-category-cabe="sarana">
+        📦 Sarana
+      </button>
+
+
+    </div>
 
 
 
-      <!-- ================= GRAFIK CABE ================= -->
 
 
-      <div class="col-lg-8">
+    <!-- SLIDER -->
 
 
-        <div class="chart-box shadow-lg">
-
-
-
-          <div class="chart-header">
-
-
-            <div>
-
-              <h4>
-                📊 Pergerakan Harga Cabe
-              </h4>
-
-
-              <small>
-                Data Simulasi 7 Hari Terakhir
-              </small>
-
-
-            </div>
+    <div class="market-slider" id="marketSliderCabe">
 
 
 
-            <span class="live-status">
-
-              ● Update
-
-            </span>
 
 
+      <!-- CABAI -->
 
+
+      <div class="market-item cabai">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🌶️
           </div>
 
 
+          <div class="market-info">
 
 
+            <h4>
+              Cabai Merah Besar
+            </h4>
 
-          <div class="chart-area">
+
+            <h3>
+              Rp45.000
+              <span>/Kg</span>
+            </h3>
 
 
-            <canvas id="cabaiChart"></canvas>
+            <p class="naik">
+              ▲ Naik Rp2.000
+            </p>
 
 
           </div>
-
 
 
         </div>
@@ -98,232 +133,496 @@
 
 
 
-      <!-- ================= CARD HARGA CABE ================= -->
+      <div class="market-item cabai">
 
 
-      <div class="col-lg-4">
+        <div class="market-card">
 
 
-        <div class="price-wrapper">
-
-
-
-
-
-          <!-- CABE MERAH BESAR -->
-
-
-          <div class="price-box shadow-sm">
-
-
-            <div class="icon-box">
-
-              🌶️
-
-            </div>
-
-
-
-            <div>
-
-
-              <p>
-                Cabai Merah Besar
-              </p>
-
-
-              <h3>
-
-                Rp 45.000
-
-                <small>
-                  /kg
-                </small>
-
-              </h3>
-
-
-
-              <span class="up">
-
-                ▲ Naik Rp2.000
-
-              </span>
-
-
-
-            </div>
-
-
+          <div class="market-icon">
+            🌶️
           </div>
 
 
+          <div class="market-info">
 
 
-
-          <!-- CABE RAWIT MERAH -->
-
-
-          <div class="price-box shadow-sm">
+            <h4>
+              Cabai Rawit Merah
+            </h4>
 
 
-            <div class="icon-box">
-
-              🌶️
-
-            </div>
-
+            <h3>
+              Rp55.000
+              <span>/Kg</span>
+            </h3>
 
 
-
-            <div>
-
-
-              <p>
-                Cabai Rawit Merah
-              </p>
-
-
-              <h3>
-
-                Rp 55.000
-
-                <small>
-                  /kg
-                </small>
-
-              </h3>
-
-
-
-              <span class="down">
-
-                ▼ Turun Rp1.000
-
-              </span>
-
-
-
-            </div>
+            <p class="turun">
+              ▼ Turun Rp1.500
+            </p>
 
 
           </div>
-
-
-
-
-
-          <!-- CABE HIJAU -->
-
-
-          <div class="price-box shadow-sm">
-
-
-            <div class="icon-box">
-
-              🌱
-
-            </div>
-
-
-
-            <div>
-
-
-              <p>
-                Cabai Hijau
-              </p>
-
-
-
-              <h3>
-
-                Rp 30.000
-
-                <small>
-                  /kg
-                </small>
-
-              </h3>
-
-
-
-              <span class="stable">
-
-                ● Stabil
-
-              </span>
-
-
-
-            </div>
-
-
-          </div>
-
-
-
-
-
-          <!-- CABE RAWIT HIJAU -->
-
-
-          <div class="price-box shadow-sm">
-
-
-            <div class="icon-box">
-
-              🌿
-
-            </div>
-
-
-
-            <div>
-
-
-              <p>
-                Cabai Rawit Hijau
-              </p>
-
-
-
-              <h3>
-
-                Rp 28.000
-
-                <small>
-                  /kg
-                </small>
-
-              </h3>
-
-
-
-              <span class="up">
-
-                ▲ Naik Rp500
-
-              </span>
-
-
-
-            </div>
-
-
-          </div>
-
-
 
 
         </div>
 
 
       </div>
+
+
+
+
+
+      <div class="market-item cabai">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🌶️
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Cabai Keriting
+            </h4>
+
+
+            <h3>
+              Rp42.000
+              <span>/Kg</span>
+            </h3>
+
+
+            <p class="stabil">
+              ● Stabil
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <!-- BENIH CABAI -->
+
+
+      <div class="market-item benihcabe">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🌱
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Benih Cabai Rawit Unggul
+            </h4>
+
+
+            <h3>
+              Rp120.000
+              <span>/1000 Biji</span>
+            </h3>
+
+
+            <p class="naik">
+              ▲ Naik
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="market-item benihcabe">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🌱
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Benih Cabai Keriting
+            </h4>
+
+
+            <h3>
+              Rp150.000
+              <span>/1000 Biji</span>
+            </h3>
+
+
+            <p class="stabil">
+              ● Stabil
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <!-- PUPUK CABAI -->
+
+
+      <div class="market-item pupukcabe">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🧪
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Pupuk NPK Mutiara
+            </h4>
+
+
+            <h3>
+              Rp18.000
+              <span>/Kg</span>
+            </h3>
+
+
+            <p class="naik">
+              ▲ Naik
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="market-item pupukcabe">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🌿
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Pupuk Kompos Organik
+            </h4>
+
+
+            <h3>
+              Rp1.500
+              <span>/Kg</span>
+            </h3>
+
+
+            <p class="stabil">
+              ● Stabil
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="market-item pupukcabe">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🧪
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Pupuk KCL
+            </h4>
+
+
+            <h3>
+              Rp12.500
+              <span>/Kg</span>
+            </h3>
+
+
+            <p class="stabil">
+              ● Stabil
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <!-- PESTISIDA -->
+
+
+      <div class="market-item pestisida">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🐛
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Insektisida Cabai
+            </h4>
+
+
+            <h3>
+              Rp75.000
+              <span>/Botol</span>
+            </h3>
+
+
+            <p class="naik">
+              ▲ Naik
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="market-item pestisida">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🍄
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Fungisida Cabai
+            </h4>
+
+
+            <h3>
+              Rp65.000
+              <span>/Botol</span>
+            </h3>
+
+
+            <p class="stabil">
+              ● Stabil
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <!-- SARANA -->
+
+
+      <div class="market-item sarana">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🪴
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Mulsa Plastik
+            </h4>
+
+
+            <h3>
+              Rp750.000
+              <span>/Roll</span>
+            </h3>
+
+
+            <p class="naik">
+              ▲ Naik
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="market-item sarana">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            💧
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Selang Irigasi
+            </h4>
+
+
+            <h3>
+              Rp350.000
+              <span>/Paket</span>
+            </h3>
+
+
+            <p class="stabil">
+              ● Stabil
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
 
 
 
     </div>
+    <!-- END SLIDER -->
+
+
+
+
+
+    <!-- DOT -->
+
+
+    <div class="market-dots" id="marketDotsCabe">
+
+    </div>
+
+
+
 
 
   </div>

@@ -1,84 +1,125 @@
-<!-- ================= HARGA PASAR ================= -->
+<!-- =====================================================
+     MARKET UPDATE HARGA PERTANIAN
+===================================================== -->
 
-<section id="harga" class="py-5 market-section">
+<section id="harga" class="market-section">
+
 
   <div class="container">
 
 
-    <!-- HEADER -->
 
-    <div class="text-center mb-5">
+    <!-- ================= HEADER ================= -->
+
+
+    <div class="market-header text-center">
+
 
       <span class="market-badge">
         📈 Market Update
       </span>
 
 
-      <h2 class="market-title">
-        Harga Pasar Komoditas Padi
+      <h2>
+        Harga Pasar Komoditas Pertanian
       </h2>
 
 
-      <p class="market-desc">
-        Informasi simulasi harga gabah dan beras sebagai referensi
-        keputusan usaha tani.
+      <p>
+        Informasi harga gabah, beras, benih,
+        pupuk, dan komoditas pertanian terbaru.
       </p>
 
+
     </div>
 
 
 
 
-    <div class="row g-4 align-items-stretch">
+
+    <!-- ================= CATEGORY ================= -->
 
 
-      <!-- ================= GRAFIK HARGA ================= -->
+    <div class="market-category">
 
 
-      <div class="col-lg-8">
+      <button class="active" data-category="all">
+        Semua
+      </button>
 
 
-        <div class="chart-box shadow-lg">
+      <button data-category="padi">
+        🌾 Padi
+      </button>
 
 
-          <div class="chart-header">
+      <button data-category="beras">
+        🍚 Beras
+      </button>
 
 
-            <div>
-
-              <h4>
-                📊 Pergerakan Harga
-              </h4>
+      <button data-category="benih">
+        🌱 Benih
+      </button>
 
 
-              <small>
-                Data Simulasi 7 Hari Terakhir
-              </small>
-
-            </div>
+      <button data-category="pupuk">
+        🧪 Pupuk
+      </button>
 
 
-
-            <span class="live-status">
-
-              ● Update
-
-            </span>
+      <button data-category="horti">
+        🌶️ Hortikultura
+      </button>
 
 
+    </div>
+
+
+
+
+
+    <!-- ================= SLIDER ================= -->
+
+
+    <div class="market-slider" id="marketSlider">
+
+
+
+
+
+      <!-- ================= PADI ================= -->
+
+
+
+      <div class="market-item padi">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🌾
           </div>
 
 
+          <div class="market-info">
 
+            <h4>
+              Gabah Kering Panen
+            </h4>
 
-          <div class="chart-area">
+            <h3>
+              Rp6.250
+              <span>/Kg</span>
+            </h3>
 
-
-            <canvas id="priceChart"></canvas>
+            <p class="naik">
+              ▲ Naik Rp150
+            </p>
 
 
           </div>
-
 
 
         </div>
@@ -90,217 +131,35 @@
 
 
 
-      <!-- ================= CARD HARGA ================= -->
+      <div class="market-item padi">
 
 
-      <div class="col-lg-4">
+        <div class="market-card">
 
 
-        <div class="price-wrapper">
-
-
-
-          <!-- GKP -->
-
-          <div class="price-box shadow-sm">
-
-
-            <div class="icon-box">
-
-              🌾
-
-            </div>
-
-
-
-            <div>
-
-
-              <p>
-                Gabah Kering Panen
-              </p>
-
-
-              <h3>
-
-                Rp 6.250
-
-                <small>
-                  /kg
-                </small>
-
-              </h3>
-
-
-              <span class="up">
-
-                ▲ Naik Rp150
-
-              </span>
-
-
-
-            </div>
-
-
-
+          <div class="market-icon">
+            🌾
           </div>
 
 
+          <div class="market-info">
+
+            <h4>
+              Gabah Kering Giling
+            </h4>
+
+            <h3>
+              Rp7.100
+              <span>/Kg</span>
+            </h3>
 
 
-
-          <!-- BERAS PREMIUM -->
-
-
-          <div class="price-box shadow-sm">
-
-
-            <div class="icon-box">
-
-              🍚
-
-            </div>
-
-
-
-            <div>
-
-
-              <p>
-                Beras Premium
-              </p>
-
-
-              <h3>
-
-                Rp 15.200
-
-                <small>
-                  /kg
-                </small>
-
-              </h3>
-
-
-              <span class="down">
-
-                ▼ Turun Rp100
-
-              </span>
-
-
-
-            </div>
-
+            <p class="stabil">
+              ● Stabil
+            </p>
 
 
           </div>
-
-
-
-
-
-          <!-- GKG -->
-
-
-          <div class="price-box shadow-sm">
-
-
-            <div class="icon-box">
-
-              🌱
-
-            </div>
-
-
-
-
-            <div>
-
-
-              <p>
-                Gabah Kering Giling
-              </p>
-
-
-              <h3>
-
-                Rp 7.100
-
-                <small>
-                  /kg
-                </small>
-
-              </h3>
-
-
-              <span class="stable">
-
-                ● Stabil
-
-              </span>
-
-
-
-            </div>
-
-
-
-          </div>
-
-
-
-
-
-          <!-- BERAS MEDIUM -->
-
-
-          <div class="price-box shadow-sm">
-
-
-            <div class="icon-box">
-
-              🍚
-
-            </div>
-
-
-
-
-            <div>
-
-
-              <p>
-                Beras Medium
-              </p>
-
-
-              <h3>
-
-                Rp 13.500
-
-                <small>
-                  /kg
-                </small>
-
-              </h3>
-
-
-              <span class="up">
-
-                ▲ Naik Rp200
-
-              </span>
-
-
-
-            </div>
-
-
-
-          </div>
-
 
 
         </div>
@@ -310,7 +169,545 @@
 
 
 
+
+
+      <!-- ================= BERAS ================= -->
+
+
+
+      <div class="market-item beras">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🍚
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Beras Premium
+            </h4>
+
+
+            <h3>
+              Rp15.200
+              <span>/Kg</span>
+            </h3>
+
+
+            <p class="turun">
+              ▼ Turun Rp100
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="market-item beras">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🍚
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Beras Medium
+            </h4>
+
+
+            <h3>
+              Rp13.500
+              <span>/Kg</span>
+            </h3>
+
+
+            <p class="naik">
+              ▲ Naik Rp200
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <!-- ================= BENIH ================= -->
+
+
+
+      <div class="market-item benih">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🌱
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Benih Inpari 32
+            </h4>
+
+
+            <h3>
+              Rp14.500
+              <span>/Kg</span>
+            </h3>
+
+
+            <p class="naik">
+              ▲ Naik
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="market-item benih">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🌱
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Benih Ciherang
+            </h4>
+
+
+            <h3>
+              Rp13.800
+              <span>/Kg</span>
+            </h3>
+
+
+            <p class="stabil">
+              ● Stabil
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <!-- ================= PUPUK ================= -->
+
+
+
+      <div class="market-item pupuk">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🧪
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Pupuk Urea
+            </h4>
+
+
+            <h3>
+              Rp2.250
+              <span>/Kg</span>
+            </h3>
+
+
+            <p class="stabil">
+              ● Stabil
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="market-item pupuk">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🧪
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              NPK Phonska
+            </h4>
+
+
+            <h3>
+              Rp2.300
+              <span>/Kg</span>
+            </h3>
+
+
+            <p class="naik">
+              ▲ Naik
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="market-item pupuk">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🌿
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Pupuk Organik
+            </h4>
+
+
+            <h3>
+              Rp1.500
+              <span>/Kg</span>
+            </h3>
+
+
+            <p class="stabil">
+              ● Stabil
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <!-- ================= HORTIKULTURA ================= -->
+
+
+
+      <div class="market-item horti">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🌶️
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Cabai Merah
+            </h4>
+
+
+            <h3>
+              Rp45.000
+              <span>/Kg</span>
+            </h3>
+
+
+            <p class="turun">
+              ▼ Turun
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="market-item horti">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🌽
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Jagung Pipilan
+            </h4>
+
+
+            <h3>
+              Rp6.000
+              <span>/Kg</span>
+            </h3>
+
+
+            <p class="naik">
+              ▲ Naik
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="market-item horti">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🫘
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Kedelai
+            </h4>
+
+
+            <h3>
+              Rp12.500
+              <span>/Kg</span>
+            </h3>
+
+
+            <p class="stabil">
+              ● Stabil
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="market-item horti">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🧴
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Insektisida
+            </h4>
+
+
+            <h3>
+              Rp65.000
+              <span>/Botol</span>
+            </h3>
+
+
+            <p class="stabil">
+              ● Stabil
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="market-item horti">
+
+
+        <div class="market-card">
+
+
+          <div class="market-icon">
+            🍄
+          </div>
+
+
+          <div class="market-info">
+
+
+            <h4>
+              Fungisida
+            </h4>
+
+
+            <h3>
+              Rp58.000
+              <span>/Botol</span>
+            </h3>
+
+
+            <p class="naik">
+              ▲ Naik
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
     </div>
+    <!-- END MARKET SLIDER -->
+
+
+
+
+
+    <!-- ================= DOT PAGINATION ================= -->
+
+
+    <div class="market-dots" id="marketDots">
+
+
+    </div>
+
+
+
 
 
   </div>
